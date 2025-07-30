@@ -56,10 +56,14 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-normal mb-4 text-white">Reach Out</h3>
             <ul className="space-y-2 text-white font-light">
-              <li>+91 99999 00000</li>
-              <li>combinedpharma@gmail.com</li>
-              <li>Chalakkudi, sample</li>
-              <li>Thrissur, Kerala 682000</li>
+              <li> 9447960496 </li>
+              <li>ifftinfo2@gmail.com</li>
+              <li>19th IFFT 2.0@KERALAINTERNATIONAL FILM FESTIVAL THRISSUR -IFFT
+                Room No.7/144/41,1st Floor,
+                Pudussery Galleria,
+                Cheroor P.O, Thrissur 680008,
+                Kerala , India
+              </li>
             </ul>
           </div>
 
@@ -78,7 +82,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-slate-300 pt-6 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-2">
           <p>&copy; 2025 IFF Thrissur. All rights reserved.</p>
-          <p>Developed by - Mindview Creative Solutions</p>
+          <p>Developed by - <a target='_blank' href="https://mindviewcreative.com/">Mindview Creative Solutions</a></p>
         </div>
       </div>
     </footer>

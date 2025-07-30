@@ -8,8 +8,8 @@ import "keen-slider/keen-slider.min.css";
 import { motion } from "framer-motion";
 
 import img1 from '../../assets/card.jpg';
-import img2 from '../../assets/card.jpg';
-import img3 from '../../assets/card.jpg';
+import img2 from '../../assets/card1.webp';
+import img3 from '../../assets/card2.webp';
 import partner from '../../assets/associate.webp';
 
 import lath from '../../assets/latheef.webp';
@@ -66,9 +66,9 @@ function Home() {
     }, [sliderInstance, sliderRef]);
 
     const cards = [
-        { image: img1, title: 'Award Winning Projects' },
-        { image: img2, title: 'Creative Shoots' },
-        { image: img3, title: 'Behind the Scenes' },
+        { image: img1, title: 'Award Winning Movies' },
+        { image: img2, title: 'Best Movie' },
+        { image: img3, title: 'Best Director' },
     ];
 
     return (
@@ -188,7 +188,7 @@ function Home() {
                     </FadeInFromBottom>
                     <FadeInFromBottom>
                         <p className="mt-3 text-lg md:text-2xl/7 font-normal tracking-wide">
-                            A Twisted sister to the RUSH Youth Film Festival, RUSH After Dark is a late-night celebration of the bizarre, the bloody, and the beautifully unhinged.
+                            A Twisted sister to the RUSH International Film Festival, RUSH After Dark is a late-night celebration of the bizarre, the bloody, and the beautifully unhinged.
                         </p>
                     </FadeInFromBottom>
                     <FadeInFromBottom>
