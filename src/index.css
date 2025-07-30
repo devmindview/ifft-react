@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  font-family: "Outfit", sans-serif;
+}
+h1,
+h2 {
+  /* font-family: "Cardo", serif; */
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+}
+
+
+.stroke-text {
+  -webkit-text-stroke: 1px #1f2937; /* Tailwind's gray-800 */
+  color: transparent;
+}
