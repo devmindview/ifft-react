@@ -21,7 +21,7 @@ const Header = () => {
         {/* Desktop Menu */}
         <nav className="hidden lg:flex items-center space-x-8 text-lg tracking-wide font-medium text-white relative">
           <Link to="/" className="hover:text-blue-500">Home</Link>
-          <Link to="/" className="hover:text-blue-500">About</Link>
+          <Link to="/about-us" className="hover:text-blue-500">About</Link>
           <Link to="/" className="hover:text-blue-500">IFFT 19</Link>
           <Link to="/" className="hover:text-blue-500">Member</Link>
           <Link to="/" className="hover:text-blue-500">Contact</Link>

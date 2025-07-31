@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 // import hero from '../../assets/hero.jpg'
-import hero2 from '../../assets/hero-2.jpg'
+import hero2 from '../../assets/hero.jpg'
 import vid from '../../assets/vid.mp4'
 import AboutCard from '../ui/AboutCard';
 import { useKeenSlider } from "keen-slider/react";
@@ -74,54 +74,54 @@ function Home() {
     return (
         <>
             <section className="relative h-screen w-full text-white overflow-hidden">
-  {/* Background Video */}
-  <div className="absolute inset-0 z-0">
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      className="w-full h-full object-cover grayscale"
-    >
-      <source src={vid} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+                {/* Background Video */}
+                <div className="absolute inset-0 z-0">
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover grayscale"
+                    >
+                        <source src={vid} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
 
-    {/* Dark overlay (optional) */}
-    <div className="absolute inset-0 bg-black/40"></div>
-  </div>
+                    {/* Dark overlay (optional) */}
+                    <div className="absolute inset-0 bg-black/40"></div>
+                </div>
 
-  {/* Centered Content */}
-  <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-4">
-    <FadeInFromBottom>
-      <h1 className="text-5xl md:text-8xl font-semibold tracking-wider text-[#dfbf78]">
-        INTERNATIONAL FILM <br /> FESTIVAL THRISSUR
-      </h1>
-    </FadeInFromBottom>
+                {/* Centered Content */}
+                <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-4">
+                    <FadeInFromBottom>
+                        <h1 className="text-5xl md:text-8xl font-semibold tracking-wider text-[#dfbf78]">
+                            INTERNATIONAL FILM <br /> FESTIVAL THRISSUR
+                        </h1>
+                    </FadeInFromBottom>
 
-    <FadeInFromBottom>
-      <p className="mt-1 text-3xl md:text-2xl font-medium text-white tracking-wider">
-        20th International Film Festival of Thrissur, IFFT
-      </p>
-    </FadeInFromBottom>
+                    <FadeInFromBottom>
+                        <p className="mt-1 text-3xl md:text-2xl font-medium text-white tracking-wider">
+                            20th International Film Festival of Thrissur, IFFT
+                        </p>
+                    </FadeInFromBottom>
 
-    <FadeInFromBottom>
-    <button className='border px-5 py-2 mt-3 hover:bg-white hover:text-black'>
-        Book My Entry Ticket
-    </button>
-    </FadeInFromBottom>
-  </div>
+                    <FadeInFromBottom>
+                        <button className='border px-5 py-2 mt-3 hover:bg-white hover:text-black'>
+                            Book Festival Entry
+                        </button>
+                    </FadeInFromBottom>
+                </div>
 
-  {/* Scroll Indicator */}
-  <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 45" className="w-6 h-10 stroke-white">
-      <rect x="1" y="1" width="28" height="43" rx="14" ry="14" stroke="currentColor" strokeWidth="2" fill="none" />
-      <circle cx="15" cy="10" r="2" fill="currentColor">
-        <animate attributeName="cy" values="10;20;10" dur="1.5s" repeatCount="indefinite" />
-      </circle>
-    </svg>
-  </div>
-</section>
+                {/* Scroll Indicator */}
+                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 45" className="w-6 h-10 stroke-white">
+                        <rect x="1" y="1" width="28" height="43" rx="14" ry="14" stroke="currentColor" strokeWidth="2" fill="none" />
+                        <circle cx="15" cy="10" r="2" fill="currentColor">
+                            <animate attributeName="cy" values="10;20;10" dur="1.5s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
+                </div>
+            </section>
 
 
             {/* About */}
@@ -130,9 +130,9 @@ function Home() {
                     {/* Left: Heading & Text */}
                     <div className="md:w-100">
                         <FadeInFromBottom>
-                            <h2 className="text-4xl font-medium text-black tracking-wide">
+                            <p className="text-3xl md:text-4xl font-semibold text-black tracking-wide">
                                 The International Film Festival of Thrissur (IFFT) is a joint venture of Thrissur Janasamskara Chalachitra Kendram, Corporation of Thrissur
-                            </h2>
+                            </p>
                         </FadeInFromBottom>
                         <FadeInFromBottom>
                             <p className="mt-3 text-gray-600 tracking-wide">
@@ -162,7 +162,7 @@ function Home() {
                 </div>
             </section>
 
-            <section className="relative h-[100vh] flex items-center justify-center text-white overflow-hidden">
+            <section className="relative h-[90vh] flex items-center justify-center text-white overflow-hidden">
                 {/* Background Image with overlay */}
                 <div className="absolute inset-0">
                     <img
@@ -171,7 +171,7 @@ function Home() {
                         className="w-full h-full object-cover"
                     />
                     {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-black/70"></div>
+                    <div className="absolute inset-0 bg-black/50"></div>
                 </div>
 
                 {/* Top Slope */}
@@ -184,11 +184,11 @@ function Home() {
                 <div className="relative z-20 max-w-5xl text-start px-4">
 
                     <FadeInFromBottom>
-                        <h1 className="text-5xl md:text-8xl font-bold tracking-wide">RUSH AFTER DARK <br /> FILM FESTIVAL 2025</h1>
+                        <h1 className="text-4xl md:text-8xl font-bold tracking-wide">LIGHTS BEYOND FRAMES <br /> FILM FESTIVAL 2025</h1>
                     </FadeInFromBottom>
                     <FadeInFromBottom>
                         <p className="mt-3 text-lg md:text-2xl/7 font-normal tracking-wide">
-                            A Twisted sister to the RUSH International Film Festival, RUSH After Dark is a late-night celebration of the bizarre, the bloody, and the beautifully unhinged.
+                        A bold celebration of cinema that transcends borders and boundaries. The International Film Festival 2025 invites stories that move, challenge, and inspire from the deeply personal to the fiercely political.
                         </p>
                     </FadeInFromBottom>
                     <FadeInFromBottom>
@@ -196,49 +196,57 @@ function Home() {
                             SUBMISSIONS NOW OPEN FOR RUSH AFTER DARK 2025
                         </p>
                     </FadeInFromBottom>
-                    <FadeInFromBottom>
-                        <button className='bg-yellow-500 text-xl md:text-2xl  text-black px-7 py-2 mt-3 tracking-wide'>
-                            Submit Form
-                        </button>
-                    </FadeInFromBottom>
+                    <div className='w-100 flex flex-col md:flex-row gap-4'>
+                        <FadeInFromBottom>
+                            <button className='bg-yellow-500 text-xl md:text-2xl  text-black px-7 py-2 mt-3 tracking-wide'>
+                                Submit Form
+                            </button>
+                        </FadeInFromBottom>
+
+
+
+                    </div>
+
                 </div>
 
             </section>
-            <div className="relative overflow-hidden bg-white py-10">
+
+            <div className="relative overflow-hidden bg-white py-1 md:py-6">
                 {/* Gradient Fades */}
                 <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10" />
                 <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10" />
 
-                <div className="whitespace-nowrap animate-scroll-text text-8xl font-bold text-gray-800">
+                <div className="whitespace-nowrap animate-scroll-text text-2xl md:text-8xl font-bold text-gray-800">
                     <span className="inline-block mx-4 uppercase">
                         Celebrating 20 Years of Cinematic Excellence. Stories That Inspire. Films That Last Forever.                    </span>
                 </div>
 
             </div>
+
             <section className="min-h-fit pb-44 relative bg-gradient-to-br from-black via-gray-950 to-blue-950 text-white py-20 px-4 overflow-hidden">
                 {/* Bottom Slope */}
                 <div className="absolute bottom-0 left-0 w-[110%] h-32 bg-white transform -translate-x-[5%] translate-y-1/2 -rotate-[-2deg] origin-bottom z-10 clip-slope-bottom" />
                 <div className="max-w-7xl mx-auto text-center">
                     {/* Heading */}
                     <FadeInFromBottom>
-                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-wider leading-tight mb-6">
-                            20<sup>th</sup> International Film Festival of Thrissur (IFFT 2.0)
-                        </h1>
+                        <p className="text-4xl md:text-5xl font-extrabold tracking-wide  leading-tight mb-6">
+                            20<sup>th</sup> International Film Festival of  Thrissur (IFFT 2.0)
+                        </p>
                     </FadeInFromBottom>
                     <FadeInFromBottom>
-                        <p className="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                        <p className="text-lg/6 md:text-2xl/7 text-gray-300 max-w-3xl mx-auto">
                             A celebration of cinema, creativity, and culture in the heart of Kerala - experience 6 unforgettable days of global film magic.
                         </p>
                     </FadeInFromBottom>
 
                     {/* Director Section */}
                     <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-8">
-                        <div className="flex flex-col items-center text-center">
-                            <FadeInFromBottom>
+                        <div className="flex flex-col mx-auto items-center text-center">
+                            <FadeInFromBottom  >
                                 <img
                                     src={lath}
                                     alt="Festival Director"
-                                    className="w-24 h-24 md:w-28 md:h-32 rounded-full object-cover shadow-lg border-2 border-yellow-700"
+                                    className="w-24 h-24 md:w-28 md:h-32 mx-auto rounded-full object-cover shadow-lg border-2 border-yellow-700"
                                 />
                                 <p className="text-lg font-semibold mt-2">Dr. K. K. Abdul Latheef</p>
                                 <p className="text-sm text-gray-400">Festival Director</p>
@@ -260,7 +268,7 @@ function Home() {
                             {
                                 title: 'Venue',
                                 content: (
-                                    <p className=' text-lg'>
+                                    <p className=' text-lg/6'>
                                         Ramdas Theatre<br />
                                         Ravikrishna Theatre<br />
                                         Medlycot Hall, St. Thomas College Thrissur
@@ -271,7 +279,7 @@ function Home() {
                             {
                                 title: 'In Association With',
                                 content: (
-                                    <p className=' text-lg'>
+                                    <p className=' text-lg/6'>
                                         Centre For Media Studies, St. Thomas College<br />
                                         Jos Theatre<br />
                                         Bhoumam Social Initiative<br />
@@ -282,7 +290,7 @@ function Home() {
                             {
                                 title: 'Organised By',
                                 content: (
-                                    <p className=' text-lg'>
+                                    <p className=' text-lg/6'>
                                         Janasamskara Chalachitra Kendram<br />
                                         Thrissur Corporation<br />
                                         Thrissur Jilla Panchayath
@@ -316,7 +324,7 @@ function Home() {
                         </h2>
                     </FadeInFromBottom>
                     <FadeInFromBottom>
-                        <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-base md:text-lg/6 leading-none">
+                        <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-base md:text-lg/5 leading-none">
                             We are proud to collaborate with institutions and organizations that support the creative arts and independent storytelling.
                         </p>
                     </FadeInFromBottom>

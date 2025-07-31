@@ -13,7 +13,7 @@ export default {
         },
       },
       animation: {
-        'scroll-text': 'scroll-text 20s linear infinite',
+        'scroll-text': 'scroll-text 15s linear infinite',
       },
     },
   },
