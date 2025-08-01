@@ -12,10 +12,42 @@ import img2 from '../../assets/card1.webp';
 import img3 from '../../assets/card2.webp';
 import partner from '../../assets/associate.webp';
 
-import lath from '../../assets/latheef.webp';
+import dora from '../../assets/dora.webp';
+import shaji from '../../assets/shaji.webp';
+import aruna from '../../assets/aruna.webp';
 import FadeInFromBottom from '../ui/FadeInFromBottom';
+import EventSection from '../components/EventSection';
 
-
+const venues = [
+    {
+        year: '2015',
+        title: 'Avengers: Age Of Ultron',
+        director: 'Alvon D. Hebdo',
+        budget: '$100 Million',
+        image: '/images/avengers.jpg',
+    },
+    {
+        year: '2018',
+        title: 'The Banshees of Inisherin',
+        director: 'Alvon D. Hebdo',
+        budget: '$100 Million',
+        image: '/images/banshees.jpg',
+    },
+    {
+        year: '2022',
+        title: 'Puss in Boots: The Last Wish',
+        director: 'Alvon D. Hebdo',
+        budget: '$100 Million',
+        image: '/images/puss.jpg',
+    },
+    {
+        year: '2023',
+        title: 'Shotgun Wedding',
+        director: 'Alvon D. Hebdo',
+        budget: '$100 Million',
+        image: '/images/shotgun.jpg',
+    },
+];
 function Home() {
 
     const [sliderRef, sliderInstance] = useKeenSlider({
@@ -101,38 +133,121 @@ function Home() {
 
                     <FadeInFromBottom>
                         <p className="mt-1 text-3xl md:text-2xl font-medium text-white tracking-wider">
-                            20th International Film Festival of Thrissur, IFFT
+                            Celebrating 20th International Film Festival of Thrissur, IFFT
                         </p>
                     </FadeInFromBottom>
 
                     <FadeInFromBottom>
-                        <button className='border px-5 py-2 mt-3 hover:bg-white hover:text-black'>
-                            Book Festival Entry
-                        </button>
+                        <a
+                            href="/Membership Form Pdf.pdf"
+                            className="inline-block my-6 px-6 py-2 border border-white text-white rounded-lg font-medium tracking-wide
+               hover:bg-white hover:text-black transition-all duration-300 ease-in-out"
+                        >
+                            Delegate / Membership Form
+                        </a>
                     </FadeInFromBottom>
+
+
                 </div>
 
                 {/* Scroll Indicator */}
-                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 45" className="w-6 h-10 stroke-white">
-                        <rect x="1" y="1" width="28" height="43" rx="14" ry="14" stroke="currentColor" strokeWidth="2" fill="none" />
-                        <circle cx="15" cy="10" r="2" fill="currentColor">
-                            <animate attributeName="cy" values="10;20;10" dur="1.5s" repeatCount="indefinite" />
-                        </circle>
-                    </svg>
+                <a href="#about-home">
+                    <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 45" className="w-6 h-10 stroke-white">
+                            <rect x="1" y="1" width="28" height="43" rx="14" ry="14" stroke="currentColor" strokeWidth="2" fill="none" />
+                            <circle cx="15" cy="10" r="2" fill="currentColor">
+                                <animate attributeName="cy" values="10;20;10" dur="1.5s" repeatCount="indefinite" />
+                            </circle>
+                        </svg>
+                    </div>
+                </a>
+            </section>
+            <section className="py-20 bg-gradient-to-br from-black via-gray-950 to-slate-950 text-white overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4">
+                    <h3 className="text-2xl md:text-3xl font-semibold mb-8">Upcoming Events</h3>
+
+                    <div className="relative w-full overflow-hidden group">
+                        <div className="flex w-max animate-scroll-card gap-6 group-hover:[animation-play-state:paused]">
+                            {[...Array(2)].flatMap(() =>
+                                [
+                                    {
+                                        id: 1,
+                                        title: "Opening Ceremony",
+                                        date: "Nov 10, 2024",
+                                        image: "/events/opening.jpg",
+                                        location: "Kairali Theatre, Thrissur",
+                                    },
+                                    {
+                                        id: 2,
+                                        title: "Global Cinema Showcase",
+                                        date: "Nov 11, 2024",
+                                        image: "/events/global.jpg",
+                                        location: "Ravikrishna Theatre",
+                                    },
+                                    {
+                                        id: 3,
+                                        title: "Directors' Panel Talk",
+                                        date: "Nov 12, 2024",
+                                        image: "/events/panel.jpg",
+                                        location: "Medlycot Hall",
+                                    },
+                                    {
+                                        id: 4,
+                                        title: "Short Film Night",
+                                        date: "Nov 13, 2024",
+                                        image: "/events/shorts.jpg",
+                                        location: "Jos Theatre",
+                                    },
+                                    {
+                                        id: 5,
+                                        title: "Award Ceremony",
+                                        date: "Nov 14, 2024",
+                                        image: "/events/awards.jpg",
+                                        location: "St. Thomas College",
+                                    },
+                                    {
+                                        id: 6,
+                                        title: "Closing Gala",
+                                        date: "Nov 15, 2024",
+                                        image: "/events/closing.jpg",
+                                        location: "Kairali Theatre",
+                                    },
+                                ].map((event, index) => (
+                                    <div
+                                        key={`${event.id}-${index}`}
+                                        className="min-w-[280px] max-w-xs bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-md overflow-hidden"
+                                    >
+                                        <img
+                                            src={event.image}
+                                            alt={event.title}
+                                            className="w-full h-16 md:h-24 object-cover"
+                                        />
+                                        <div className="p-4">
+                                            <h3 className="text-lg font-semibold mb-1">{event.title}</h3>
+                                            <p className="text-sm text-gray-300">{event.date}</p>
+                                            <p className="text-sm text-gray-400">{event.location}</p>
+                                        </div>
+                                    </div>
+                                ))
+                            )}
+                        </div>
+                    </div>
                 </div>
             </section>
 
 
+
+
+
             {/* About */}
-            <section className="w-full py-20 bg-white">
+            <section id='about-home' className="w-full py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 flex flex-col  gap-8">
                     {/* Left: Heading & Text */}
                     <div className="md:w-100">
                         <FadeInFromBottom>
-                            <p className="text-3xl md:text-4xl font-semibold text-black tracking-wide">
+                            <h3 className="text-3xl md:text-5xl font-semibold text-gray-900">
                                 The International Film Festival of Thrissur (IFFT) is a joint venture of Thrissur Janasamskara Chalachitra Kendram, Corporation of Thrissur
-                            </p>
+                            </h3>
                         </FadeInFromBottom>
                         <FadeInFromBottom>
                             <p className="mt-3 text-gray-600 tracking-wide">
@@ -141,12 +256,63 @@ function Home() {
                         </FadeInFromBottom>
 
                         <FadeInFromBottom>
-                            <button className="mt-6 px-6 py-3 bg-yellow-400 text-black font-medium rounded rounded-s-none rounded-e-full shadow hover:bg-yellow-500 transition tracking-wide">
-                                About us
-                            </button>
+                            <div className="mt-12 space-y-6 max-w-7xl">
+                                <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 tracking-tight">
+                                    🎬 Submit Your Film Entry
+                                </h3>
+                                <p className="text-gray-600">
+                                    Download the official entry form and submit to the appropriate category.
+                                </p>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                                    {/* Malayalam Cinema */}
+                                    <div className="relative flex flex-col bg-white border border-gray-300 text-black p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
+                                        <span className="text-lg font-semibold text-yellow-800">Malayalam Cinema</span>
+                                        <p className="text-sm text-gray-600 mt-2">📄 Download Form</p>
+                                        <a
+                                            href="/20th IFFT - 2025 Competition Films malayalam.pdf"
+                                            download
+                                            className="absolute bottom-4 right-4 inline-block bg-yellow-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-yellow-700 transition"
+                                        >
+                                            Apply Now
+                                        </a>
+                                    </div>
+
+                                    {/* Indian Cinema */}
+                                    <div className="relative flex flex-col bg-white border border-gray-300 text-black p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
+                                        <span className="text-lg font-semibold text-red-800">Indian Cinema</span>
+                                        <p className="text-sm text-gray-600 mt-2">📄 Download Form</p>
+                                        <a
+                                            href="/20th IFFT - 2025 Competition Films Indian.pdf"
+                                            download
+                                            className="absolute bottom-4 right-4 inline-block bg-red-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-red-700 transition"
+                                        >
+                                            Apply Now
+                                        </a>
+                                    </div>
+
+                                    {/* Asian Cinema */}
+                                    <div className="relative flex flex-col bg-white border border-gray-300 text-black p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
+                                        <span className="text-lg font-semibold text-indigo-800">Asian Cinema</span>
+                                        <p className="text-sm text-gray-600 mt-2">📄 Download Form</p>
+                                        <a
+                                            href="/20th IFFT - 2025 Competition Films  asian.pdf"
+                                            download
+                                            className="absolute bottom-4 right-4 inline-block bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-indigo-700 transition"
+                                        >
+                                            Apply Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </FadeInFromBottom>
+
+
+
+
                     </div>
 
+                    <h3 className="text-2xl md:text-3xl font-semibold mb-0">🎬 Best Films 19 <sup>th</sup> IFFT</h3>
                     {/* Right: Keen Slider */}
                     <div className="md:w-100">
                         <FadeInFromBottom>
@@ -161,71 +327,10 @@ function Home() {
                     </div>
                 </div>
             </section>
-
-            <section className="relative h-[90vh] flex items-center justify-center text-white overflow-hidden">
-                {/* Background Image with overlay */}
-                <div className="absolute inset-0">
-                    <img
-                        src={hero2}
-                        alt="Background"
-                        className="w-full h-full object-cover"
-                    />
-                    {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-black/50"></div>
-                </div>
+            <section className="min-h-fit pt-40 pb-32 relative bg-gradient-to-br from-green-950 via-gray-950 to-blue-950 text-white py-20 px-4 overflow-hidden">
 
                 {/* Top Slope */}
-                <div className="absolute top-0 left-0 w-[110%] h-32 bg-white transform -translate-x-[5%] -translate-y-1/2 rotate-[3deg] origin-top z-10 clip-slope-top" />
-
-                {/* Bottom Slope */}
-                {/* <div className="absolute bottom-0 left-0 w-[110%] h-32 bg-white transform -translate-x-[5%] translate-y-1/2 -rotate-[-3deg] origin-bottom z-10 clip-slope-bottom" /> */}
-
-                {/* Content */}
-                <div className="relative z-20 max-w-5xl text-start px-4">
-
-                    <FadeInFromBottom>
-                        <h1 className="text-4xl md:text-8xl font-bold tracking-wide">LIGHTS BEYOND FRAMES <br /> FILM FESTIVAL 2025</h1>
-                    </FadeInFromBottom>
-                    <FadeInFromBottom>
-                        <p className="mt-3 text-lg md:text-2xl/7 font-normal tracking-wide">
-                        A bold celebration of cinema that transcends borders and boundaries. The International Film Festival 2025 invites stories that move, challenge, and inspire from the deeply personal to the fiercely political.
-                        </p>
-                    </FadeInFromBottom>
-                    <FadeInFromBottom>
-                        <p className="mt-2 text-md md:text-lg tracking-wide">
-                            SUBMISSIONS NOW OPEN FOR RUSH AFTER DARK 2025
-                        </p>
-                    </FadeInFromBottom>
-                    <div className='w-100 flex flex-col md:flex-row gap-4'>
-                        <FadeInFromBottom>
-                            <button className='bg-yellow-500 text-xl md:text-2xl  text-black px-7 py-2 mt-3 tracking-wide'>
-                                Submit Form
-                            </button>
-                        </FadeInFromBottom>
-
-
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <div className="relative overflow-hidden bg-white py-1 md:py-6">
-                {/* Gradient Fades */}
-                <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10" />
-                <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10" />
-
-                <div className="whitespace-nowrap animate-scroll-text text-2xl md:text-8xl font-bold text-gray-800">
-                    <span className="inline-block mx-4 uppercase">
-                        Celebrating 20 Years of Cinematic Excellence. Stories That Inspire. Films That Last Forever.                    </span>
-                </div>
-
-            </div>
-
-            <section className="min-h-fit pb-44 relative bg-gradient-to-br from-black via-gray-950 to-blue-950 text-white py-20 px-4 overflow-hidden">
-                {/* Bottom Slope */}
-                <div className="absolute bottom-0 left-0 w-[110%] h-32 bg-white transform -translate-x-[5%] translate-y-1/2 -rotate-[-2deg] origin-bottom z-10 clip-slope-bottom" />
+                {/* <div className="absolute top-0 left-0 w-[110%] h-32 bg-white transform -translate-x-[5%] -translate-y-1/2 rotate-[3deg] origin-top z-10 clip-slope-top" /> */}
                 <div className="max-w-7xl mx-auto text-center">
                     {/* Heading */}
                     <FadeInFromBottom>
@@ -240,39 +345,51 @@ function Home() {
                     </FadeInFromBottom>
 
                     {/* Director Section */}
-                    <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-8">
-                        <div className="flex flex-col mx-auto items-center text-center">
-                            <FadeInFromBottom  >
-                                <img
-                                    src={lath}
-                                    alt="Festival Director"
-                                    className="w-24 h-24 md:w-28 md:h-32 mx-auto rounded-full object-cover shadow-lg border-2 border-yellow-700"
-                                />
-                                <p className="text-lg font-semibold mt-2">Dr. K. K. Abdul Latheef</p>
-                                <p className="text-sm text-gray-400">Festival Director</p>
-                            </FadeInFromBottom>
+                    <div className="mt-2 w-full flex flex-col items-center justify-center gap-8 px-0 sm:px-0">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full mt-12">
+                            {[
+                                { src: shaji, name: "SHAJI N KARUN", title: "Festival Director" },
+                                { src: aruna, name: "ARUNA VASUDEV", title: "Festival Director" },
+                                { src: dora, name: "DOROTHEA MACHINGAL", title: "Festival Director" },
+                            ].map(({ src, name, title }, i) => (
+                                <FadeInFromBottom key={i}>
+                                    <div className="group flex flex-col items-center text-center p-4 bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl shadow-md min-h-[240px] w-full hover:grayscale-0 ">
+                                        <img
+                                            src={src}
+                                            alt={name}
+                                            className="grayscale group-hover:grayscale-0 transition duration-500 ease-in-out w-48 h-40 md:w-40 md:h-40 rounded-2xl object-cover shadow-lg border-2 border-transparent mb-2"
+                                        />
+                                        <p className="text-base font-semibold text-white">{name}</p>
+                                        {/* <p className="text-sm text-gray-400">{title}</p> */}
+                                    </div>
+                                </FadeInFromBottom>
+                            ))}
                         </div>
 
-                        <div className="text-left max-w-xl text-gray-200 bg-white/5 backdrop-blur-md p-6 rounded-lg shadow-inner border border-white/10">
+                        <div className="w-full text-left text-gray-200 bg-white/5 backdrop-blur-md p-6 rounded-lg shadow-inner border border-white/10 transition hover:scale-[1.01]">
                             <FadeInFromBottom>
-                                <p className="text-sm md:text-lg">
+                                <p className="text-lg/6 md:text-lg">
                                     Undoubtedly, these are incredibly challenging times. However, cinema continues to inspire, provoke, and unite. Join us as we celebrate the power of storytelling, and the people behind it.
                                 </p>
                             </FadeInFromBottom>
                         </div>
                     </div>
 
+
                     {/* Info Boxes */}
-                    <div className="mt-16 grid md:grid-cols-3 gap-6 text-left">
+                    <div className="mt-10 grid md:grid-cols-3 gap-6 text-left">
                         {[
                             {
                                 title: 'Venue',
                                 content: (
                                     <p className=' text-lg/6'>
-                                        Ramdas Theatre<br />
-                                        Ravikrishna Theatre<br />
-                                        Medlycot Hall, St. Thomas College Thrissur
-                                        <p className="mt-2 text-base text-gray-400">Nov 10–15, 2024 • Thrissur, Kerala</p>
+                                        KAIRALI/SREE Theatre, Thrissur<br />
+                                        Medlycot Hall<br />
+                                        St.Thomas College <br />
+                                        Bini Heritage <br />
+                                        Swaraj Round <br />
+                                        BANERJI MEMORIAL CLUB
+                                        {/* <p className="mt-2 text-base text-gray-400">Nov 10–15, 2024 • Thrissur, Kerala</p> */}
                                     </p>
                                 )
                             },
@@ -303,9 +420,12 @@ function Home() {
                                 className="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 shadow-lg transition hover:scale-[1.02]"
                             >
                                 <FadeInFromBottom>
-                                    <h3 className="text-yellow-500 font-semibold text-lg mb-2">{title}</h3>
+                                    <h3 className="text-blue-500 font-semibold text-lg mb-2">{title}</h3>
                                     <div className="text-sm text-gray-200 leading-relaxed">{content}</div>
                                 </FadeInFromBottom>
+
+
+
                             </div>
                         ))}
                     </div>
@@ -314,8 +434,77 @@ function Home() {
                 {/* Background Film Strip Overlay */}
                 <div className="absolute top-0 left-0 w-full h-full bg-[url('/filmstrip.png')] opacity-5 bg-cover bg-center pointer-events-none z-0" />
             </section>
+            <div className="relative overflow-hidden bg-white py-1 md:py-6">
+                {/* Gradient Fades */}
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10" />
+
+                <div className="whitespace-nowrap  animate-scroll-text text-2xl md:text-8xl font-bold text-gray-800">
+                    <span className="inline-block  mx-4 uppercase ">
+                        Celebrating 20 Years of Cinematic Excellence. Stories That Inspire. Films That Last Forever.                    </span>
+                </div>
+
+            </div>
+            <section className="relative h-[90vh] flex items-center justify-center text-white overflow-hidden">
+                {/* Background Image with overlay */}
+                <div className="absolute inset-0">
+                    <img
+                        src={hero2}
+                        alt="Background"
+                        className="w-full h-full object-cover"
+                    />
+                    {/* Dark overlay */}
+                    <div className="absolute inset-0 bg-black/50"></div>
+                </div>
 
 
+
+                {/* Bottom Slope */}
+                <div className="absolute bottom-0 left-0 w-[110%] h-32 bg-white transform -translate-x-[5%] translate-y-1/2 -rotate-[-2deg] origin-bottom z-10 clip-slope-bottom" />
+
+                {/* Content */}
+                <div className="relative z-20 max-w-6xl text-start px-4">
+
+                    <FadeInFromBottom>
+                        <h1 className="text-4xl md:text-8xl font-bold tracking-wide">LIGHTS BEYOND FRAMES <br /> FILM FESTIVAL 2025</h1>
+                    </FadeInFromBottom>
+                    <FadeInFromBottom>
+                        <p className="mt-3 text-lg md:text-2xl/7 font-normal tracking-wide">
+                            A bold celebration of cinema that transcends borders and boundaries. The International Film Festival 2025 invites stories that move, challenge, and inspire from the deeply personal to the fiercely political.
+                        </p>
+                    </FadeInFromBottom>
+                    <FadeInFromBottom>
+                        <p className="mt-2 text-md md:text-lg tracking-wide">
+
+                            Download the Delegate form and submit .
+                        </p>
+                    </FadeInFromBottom>
+                    <div className='w-100 flex flex-col md:flex-row gap-4'>
+                        <FadeInFromBottom>
+                            <a
+                                href="/Membership Form Pdf.pdf"
+                                download
+                                className="inline-block"
+                            >
+                                <button className="bg-yellow-500 text-xl md:text-2xl text-black px-7 py-2 mt-3 tracking-wide hover:bg-yellow-600 transition rounded">
+                                    Delegate / Membership Form
+                                </button>
+                            </a>
+                        </FadeInFromBottom>
+
+
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+
+            {/* <EventSection /> */}
             <section className="bg-white py-16 px-4">
                 <div className="max-w-6xl mx-auto text-center">
                     <FadeInFromBottom>

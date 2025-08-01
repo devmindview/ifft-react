@@ -1,6 +1,5 @@
 import React from 'react';
-// import { Facebook, Instagram, Twitter, YouTube } from '@mui/icons-material';
-// import WhatsAppChat from '../common/WhatsAppChat';
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";// import WhatsAppChat from '../common/WhatsAppChat';
 import bgImage from '../../assets/footer.webp';
 import { Link } from 'react-router-dom';
 
@@ -55,10 +54,10 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h3 className="text-lg font-normal mb-4 text-white">Reach Out</h3>
-            <ul className="space-y-2 text-white font-light">
-              <li> 9447960496 </li>
+            <ul className="space-y-2 text-white text-sm font-light">
+              <li> +91 7907196843 <br /> +91 9446763855 <br /> +91 9847002719</li>
               <li>ifftinfo2@gmail.com</li>
-              <li>19th IFFT 2.0@KERALAINTERNATIONAL FILM FESTIVAL THRISSUR -IFFT
+              <li>20th IFFT 2.0@KERALAINTERNATIONAL FILM FESTIVAL THRISSUR -IFFT
                 Room No.7/144/41,1st Floor,
                 Pudussery Galleria,
                 Cheroor P.O, Thrissur 680008,
@@ -70,12 +69,40 @@ const Footer = () => {
           {/* Social */}
           <div>
             <h3 className="text-lg font-normal mb-4 text-white">Follow the Journey</h3>
-            {/* <div className="flex space-x-4 text-white font-light">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-black"><Facebook /></a>
-              <a href="https://instagram.com/kayakify.kochi" target="_blank" rel="noopener noreferrer" className="hover:text-black"><Instagram /></a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-black"><Twitter /></a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-black"><YouTube /></a>
-            </div> */}
+            <div className="flex space-x-4 text-white font-light">
+              <a
+                href="https://facebook.com" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-600 text-xl transition"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://instagram.com/kayakify.kochi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-600 text-xl transition"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-600 text-xl transition"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-600 text-xl transition"
+              >
+                <FaYoutube />
+              </a>
+            </div>
           </div>
         </div>
 

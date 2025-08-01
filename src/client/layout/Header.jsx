@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo2.png'
+import { FaTicketAlt } from "react-icons/fa";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ const Header = () => {
           <img
             src={logo} // Replace with your logo
             alt="combined"
-            className="w-16 md:w-20 mr-2"
+            className="w-28 md:w-36 mr-2"
           />
 
         </Link>
@@ -30,15 +31,19 @@ const Header = () => {
 
 
         {/* Contact Button (desktop only) */}
-        <div className="hidden lg:block">
 
-          <Link to={'/contact'} className="bg-transparent border border-yellow-500 text-yellow-500 px-6 py-3 rounded-full font-bold hover:text-white text-sm hover:bg-yellow-600 transition">
-            Delegate Form
-          </Link>
+
+        <div className="hidden lg:block">
+          <a href="/Membership Form Pdf.pdf"
+            className="bg-transparent border border-yellow-500 text-yellow-500 px-6 py-3 rounded-full font-bold text-sm hover:text-white hover:bg-yellow-600 transition flex items-center gap-2 animate-soft-blink"
+          >
+            <FaTicketAlt className="text-lg" />
+            Delegate Registration
+          </a>
         </div>
 
         {/* Hamburger (mobile only) */}
-        <button onClick={() => setMenuOpen(true)} className="lg:hidden text-gray-700">
+        <button onClick={() => setMenuOpen(true)} className="lg:hidden text-gray-300">
           <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -76,11 +81,11 @@ const Header = () => {
           <nav className="space-y-5 text-white font-medium text-sm">
             <Link to="/" className="block hover:text-blue-500">Home</Link>
             <hr />
-            <Link to="/about" className="block hover:text-blue-500">About</Link>
+            <Link to="/about-us" className="block hover:text-blue-500">About</Link>
             <hr />
-            <Link to="/products" className="block hover:text-blue-500">Products</Link>
+            <Link to="/" className="block hover:text-blue-500">Contact</Link>
             <hr />
-            
+
 
           </nav>
         </div>
