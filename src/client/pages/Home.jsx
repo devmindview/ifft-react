@@ -120,20 +120,22 @@ function Home() {
                     </video>
 
                     {/* Dark overlay (optional) */}
-                    <div className="absolute inset-0 bg-black/40"></div>
+                    <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-black to-transparent z-10" />
+                    <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent z-10" />
+                    <div className="absolute inset-0 bg-black/40 z-10" /> {/* Subtle center darkness */}
                 </div>
 
                 {/* Centered Content */}
                 <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-4">
                     <FadeInFromBottom>
-                        <h1 className="text-5xl md:text-8xl font-semibold tracking-wider text-[#dfbf78]">
-                            INTERNATIONAL FILM <br /> FESTIVAL THRISSUR
+                        <h1 className="text-5xl md:text-6xl font-bold tracking-wide text-[#ffd57c]">
+                            International Film <br /> Festival Thrissur
                         </h1>
                     </FadeInFromBottom>
 
                     <FadeInFromBottom>
-                        <p className="mt-1 text-3xl md:text-2xl font-medium text-white tracking-wider">
-                            Celebrating 20th International Film Festival of Thrissur, IFFT
+                        <p className="mt-1 text-xl md:text-3xl font-medium text-white tracking-wider">
+                            Celebrating 20th International Film Festival of Thrissur <br /> 2025 SEPTEMBER 26- OCTOBER 2 @Thrissur
                         </p>
                     </FadeInFromBottom>
 
@@ -162,7 +164,9 @@ function Home() {
                     </div>
                 </a>
             </section>
-            <section className="py-20 bg-gradient-to-br from-black via-gray-950 to-slate-950 text-white overflow-hidden">
+
+            {/* Upcoming events */}
+            <section className="py-20 bg-gradient-to-br from-black via-black to-slate-950 text-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4">
                     <h3 className="text-2xl md:text-3xl font-semibold mb-8">Upcoming Events</h3>
 
@@ -234,10 +238,6 @@ function Home() {
                     </div>
                 </div>
             </section>
-
-
-
-
 
             {/* About */}
             <section id='about-home' className="w-full py-20 bg-white">
@@ -327,6 +327,8 @@ function Home() {
                     </div>
                 </div>
             </section>
+
+            {/* Details */}
             <section className="min-h-fit pt-40 pb-32 relative bg-gradient-to-br from-green-950 via-gray-950 to-blue-950 text-white py-20 px-4 overflow-hidden">
 
                 {/* Top Slope */}
@@ -369,7 +371,7 @@ function Home() {
                         <div className="w-full text-left text-gray-200 bg-white/5 backdrop-blur-md p-6 rounded-lg shadow-inner border border-white/10 transition hover:scale-[1.01]">
                             <FadeInFromBottom>
                                 <p className="text-lg/6 md:text-lg">
-                                    Undoubtedly, these are incredibly challenging times. However, cinema continues to inspire, provoke, and unite. Join us as we celebrate the power of storytelling, and the people behind it.
+                                    Undoubtedly, these are incredibly challenging times. However, cinema continues to inspire, provoke, and unite. Join us as we celebrate the power of storytelling, and the people behind it. The Twentieth Edition of the International Film Festival of Thrissur (IFFT), 2025 is being held from <span className='text-blue-300'>26th September to 2nd October</span> , not confined to a single venue but spreading its wings to suburban pockets around Thrissur.
                                 </p>
                             </FadeInFromBottom>
                         </div>
@@ -434,6 +436,8 @@ function Home() {
                 {/* Background Film Strip Overlay */}
                 <div className="absolute top-0 left-0 w-full h-full bg-[url('/filmstrip.png')] opacity-5 bg-cover bg-center pointer-events-none z-0" />
             </section>
+
+            {/* Moving long text */}
             <div className="relative overflow-hidden bg-white py-1 md:py-6">
                 {/* Gradient Fades */}
                 <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10" />
@@ -441,11 +445,13 @@ function Home() {
 
                 <div className="whitespace-nowrap  animate-scroll-text text-2xl md:text-8xl font-bold text-gray-800">
                     <span className="inline-block  mx-4 uppercase ">
-                        Celebrating 20 Years of Cinematic Excellence. Stories That Inspire. Films That Last Forever.                    </span>
+                        Celebrating 20 Years of Cinematic Excellence. Stories That Inspire. Films That Last Forever.</span>
                 </div>
 
             </div>
-            <section className="relative h-[90vh] flex items-center justify-center text-white overflow-hidden">
+
+
+            <section className="relative max-h-fit  pt-10 pb-24  md:pt-32 md:pb-40 flex items-center justify-center text-white overflow-hidden">
                 {/* Background Image with overlay */}
                 <div className="absolute inset-0">
                     <img
@@ -454,7 +460,7 @@ function Home() {
                         className="w-full h-full object-cover"
                     />
                     {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-black/50"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/80 to-blue-950/70"></div>
                 </div>
 
 
@@ -463,7 +469,7 @@ function Home() {
                 <div className="absolute bottom-0 left-0 w-[110%] h-32 bg-white transform -translate-x-[5%] translate-y-1/2 -rotate-[-2deg] origin-bottom z-10 clip-slope-bottom" />
 
                 {/* Content */}
-                <div className="relative z-20 max-w-6xl text-start px-4">
+                <div className="relative z-20 max-w-7xl text-start px-4">
 
                     <FadeInFromBottom>
                         <h1 className="text-4xl md:text-8xl font-bold tracking-wide">LIGHTS BEYOND FRAMES <br /> FILM FESTIVAL 2025</h1>
@@ -474,7 +480,7 @@ function Home() {
                         </p>
                     </FadeInFromBottom>
                     <FadeInFromBottom>
-                        <p className="mt-2 text-md md:text-lg tracking-wide">
+                        <p className="mt-3 text-md md:text-lg text-gray-400 tracking-wide">
 
                             Download the Delegate form and submit .
                         </p>
@@ -491,26 +497,47 @@ function Home() {
                                 </button>
                             </a>
                         </FadeInFromBottom>
-
-
-
-
                     </div>
+
+                    <div className="mt-6 text-left w-full mx-auto space-y-4 bg-white/10 p-6 rounded-2xl backdrop-blur-md border border-white/20">
+                        <FadeInFromBottom>
+                            <p className="text-lg sm:text-xl mb-3 text-gray-300 font-medium">
+                            2025 SEPTEMBER 26 – OCTOBER 2 @ Thrissur, Kerala
+                        </p>
+                        <h3 className="text-xl sm:text-2xl mb-2 font-semibold text-white">Film Categories:</h3>
+                        <ul className="list-disc list-inside text-lg text-gray-300 pl-4 space-y-1">
+                            <li><strong>ASIAN Cinema</strong></li>
+                            <li><strong>Global Cinema</strong> – Internationally acclaimed contemporary films made in 2024 from across the globe</li>
+                            <li><strong>Indian Panorama</strong> – Films from various Indian languages</li>
+                        </ul>
+
+                        <h3 className="text-xl sm:text-2xl mb-2 font-semibold pt-4 text-white">Key Highlights:</h3>
+                        <ul className="list-disc list-inside text-lg text-gray-300 pl-4 space-y-1">
+                            <li>Competition for BEST OF ASIAN - INDIAN - MALAYALAM Debut Films</li>
+                            <li>IFFT - Shaji N Karun Asian Film Award: ₹1,00,000 for Best Asian debut cinema</li>
+                            <li>IFFT - Aruna Vasudev Best Asian Film Director: ₹1,00,000 for debut filmmakers from Asia</li>
+                            <li>IFFT - Dorothea Machingal FILM Award: ₹1,00,000 for debut filmmakers from India</li>
+                            <li>IFFT - FILM Award: ₹1,00,000 for debut filmmakers in Malayalam</li>
+                        </ul>
+                        </FadeInFromBottom>
+                    </div>
+
+                    <p className="mt-6 text-lg text-center font-semibold text-yellow-400">50+ Movies</p>
+
 
                 </div>
 
             </section>
 
 
-
-
+           
             {/* <EventSection /> */}
             <section className="bg-white py-16 px-4">
                 <div className="max-w-6xl mx-auto text-center">
                     <FadeInFromBottom>
-                        <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-2">
+                        <h3 className="text-3xl md:text-4xl font-medium text-gray-900 mb-2">
                             In Association With
-                        </h2>
+                        </h3>
                     </FadeInFromBottom>
                     <FadeInFromBottom>
                         <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-base md:text-lg/5 leading-none">

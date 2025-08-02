@@ -23,9 +23,8 @@ const Header = () => {
         <nav className="hidden lg:flex items-center space-x-8 text-lg tracking-wide font-medium text-white relative">
           <Link to="/" className="hover:text-blue-500">Home</Link>
           <Link to="/about-us" className="hover:text-blue-500">About</Link>
-          <Link to="/" className="hover:text-blue-500">IFFT 19</Link>
-          <Link to="/" className="hover:text-blue-500">Member</Link>
-          <Link to="/" className="hover:text-blue-500">Contact</Link>
+          <Link to="/twenty-ifft" className="hover:text-blue-500">IFFT 20 <sup>th</sup> </Link>
+          <Link to="/kottaka" className="hover:text-blue-500">Kottaka</Link>
 
         </nav>
 
@@ -83,9 +82,10 @@ const Header = () => {
             <hr />
             <Link to="/about-us" className="block hover:text-blue-500">About</Link>
             <hr />
-            <Link to="/" className="block hover:text-blue-500">Contact</Link>
+            <Link to="/twenty-ifft" className="block hover:text-blue-500">IFFT 20 <sup>th</sup> </Link>
             <hr />
-
+            <Link to="/kottaka" className="block hover:text-blue-500">Kottaka </Link>
+            <hr />
 
           </nav>
         </div>
