@@ -141,11 +141,11 @@ function Home() {
 
                     <FadeInFromBottom>
                         <a
-                            href="/Membership Form Pdf.pdf"
+                            href="#about-home"
                             className="inline-block my-6 px-6 py-2 border border-white text-white rounded-lg font-medium tracking-wide
                hover:bg-white hover:text-black transition-all duration-300 ease-in-out"
                         >
-                            Delegate / Membership Form
+                            Entry Form
                         </a>
                     </FadeInFromBottom>
 
@@ -265,18 +265,19 @@ function Home() {
                                 </p>
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                                    {/* Malayalam Cinema */}
+                                    {/* Asian Cinema */}
                                     <div className="relative flex flex-col bg-white border border-gray-300 text-black p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
-                                        <span className="text-lg font-semibold text-yellow-800">Malayalam Cinema</span>
+                                        <span className="text-lg font-semibold text-indigo-800">Asian Cinema</span>
                                         <p className="text-sm text-gray-600 mt-2">📄 Download Form</p>
                                         <a
-                                            href="/20th IFFT - 2025 Competition Films malayalam.pdf"
+                                            href="/20th IFFT - 2025 Competition Films  asian.pdf"
                                             download
-                                            className="absolute bottom-4 right-4 inline-block bg-yellow-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-yellow-700 transition"
+                                            className="absolute bottom-4 right-4 inline-block bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-indigo-700 transition"
                                         >
                                             Apply Now
                                         </a>
                                     </div>
+
 
                                     {/* Indian Cinema */}
                                     <div className="relative flex flex-col bg-white border border-gray-300 text-black p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
@@ -290,19 +291,19 @@ function Home() {
                                             Apply Now
                                         </a>
                                     </div>
-
-                                    {/* Asian Cinema */}
+                                    {/* Malayalam Cinema */}
                                     <div className="relative flex flex-col bg-white border border-gray-300 text-black p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
-                                        <span className="text-lg font-semibold text-indigo-800">Asian Cinema</span>
+                                        <span className="text-lg font-semibold text-yellow-800">Malayalam Cinema</span>
                                         <p className="text-sm text-gray-600 mt-2">📄 Download Form</p>
                                         <a
-                                            href="/20th IFFT - 2025 Competition Films  asian.pdf"
+                                            href="/20th IFFT - 2025 Competition Films malayalam.pdf"
                                             download
-                                            className="absolute bottom-4 right-4 inline-block bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-indigo-700 transition"
+                                            className="absolute bottom-4 right-4 inline-block bg-yellow-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-yellow-700 transition"
                                         >
                                             Apply Now
                                         </a>
                                     </div>
+
                                 </div>
                             </div>
                         </FadeInFromBottom>
@@ -386,11 +387,11 @@ function Home() {
                                 content: (
                                     <p className=' text-lg/6'>
                                         KAIRALI/SREE Theatre, Thrissur<br />
-                                        Medlycot Hall<br />
+
                                         St.Thomas College <br />
                                         Bini Heritage <br />
                                         Swaraj Round <br />
-                                        BANERJI MEMORIAL CLUB
+
                                         {/* <p className="mt-2 text-base text-gray-400">Nov 10–15, 2024 • Thrissur, Kerala</p> */}
                                     </p>
                                 )
@@ -502,23 +503,23 @@ function Home() {
                     <div className="mt-6 text-left w-full mx-auto space-y-4 bg-white/10 p-6 rounded-2xl backdrop-blur-md border border-white/20">
                         <FadeInFromBottom>
                             <p className="text-lg sm:text-xl mb-3 text-gray-300 font-medium">
-                            2025 SEPTEMBER 26 – OCTOBER 2 @ Thrissur, Kerala
-                        </p>
-                        <h3 className="text-xl sm:text-2xl mb-2 font-semibold text-white">Film Categories:</h3>
-                        <ul className="list-disc list-inside text-lg text-gray-300 pl-4 space-y-1">
-                            <li><strong>ASIAN Cinema</strong></li>
-                            <li><strong>Global Cinema</strong> – Internationally acclaimed contemporary films made in 2024 from across the globe</li>
-                            <li><strong>Indian Panorama</strong> – Films from various Indian languages</li>
-                        </ul>
+                                2025 SEPTEMBER 26 – OCTOBER 2 @ Thrissur, Kerala
+                            </p>
+                            <h3 className="text-xl sm:text-2xl mb-2 font-semibold text-white">Film Categories:</h3>
+                            <ul className="list-disc list-inside text-lg text-gray-300 pl-4 space-y-1">
+                                <li><strong>ASIAN Cinema</strong></li>
+                                <li><strong>Global Cinema</strong> – Internationally acclaimed contemporary films made in 2024 from across the globe</li>
+                                <li><strong>Indian Panorama</strong> – Films from various Indian languages</li>
+                            </ul>
 
-                        <h3 className="text-xl sm:text-2xl mb-2 font-semibold pt-4 text-white">Key Highlights:</h3>
-                        <ul className="list-disc list-inside text-lg text-gray-300 pl-4 space-y-1">
-                            <li>Competition for BEST OF ASIAN - INDIAN - MALAYALAM Debut Films</li>
-                            <li>IFFT - Shaji N Karun Asian Film Award: ₹1,00,000 for Best Asian debut cinema</li>
-                            <li>IFFT - Aruna Vasudev Best Asian Film Director: ₹1,00,000 for debut filmmakers from Asia</li>
-                            <li>IFFT - Dorothea Machingal FILM Award: ₹1,00,000 for debut filmmakers from India</li>
-                            <li>IFFT - FILM Award: ₹1,00,000 for debut filmmakers in Malayalam</li>
-                        </ul>
+                            <h3 className="text-xl sm:text-2xl mb-2 font-semibold pt-4 text-white">Key Highlights:</h3>
+                            <ul className="list-disc list-inside text-lg text-gray-300 pl-4 space-y-1">
+                                <li>Competition for BEST OF ASIAN - INDIAN - MALAYALAM Debut Films</li>
+                                <li>IFFT - Shaji N Karun Asian Film Award: ₹1,00,000 for Best Asian debut cinema</li>
+                                <li>IFFT - Aruna Vasudev Best Asian Film Director: ₹1,00,000 for debut filmmakers from Asia</li>
+                                <li>IFFT - Dorothea Machingal FILM Award: ₹1,00,000 for debut filmmakers from India</li>
+                                <li>IFFT - FILM Award: ₹1,00,000 for debut filmmakers in Malayalam</li>
+                            </ul>
                         </FadeInFromBottom>
                     </div>
 
@@ -530,7 +531,7 @@ function Home() {
             </section>
 
 
-           
+
             {/* <EventSection /> */}
             <section className="bg-white py-16 px-4">
                 <div className="max-w-6xl mx-auto text-center">

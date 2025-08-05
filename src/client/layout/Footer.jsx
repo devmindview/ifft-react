@@ -57,7 +57,7 @@ const Footer = () => {
             <ul className="space-y-2 text-white text-sm font-light">
               <li> +91 7907196843 <br /> +91 9446763855 <br /> +91 9847002719</li>
               <li>ifftinfo2@gmail.com</li>
-              <li>20th IFFT 2.0@KERALAINTERNATIONAL FILM FESTIVAL THRISSUR -IFFT
+              <li>20 <sup>th</sup> IFFT @KERALAINTERNATIONAL FILM FESTIVAL THRISSUR -IFFT
                 Room No.7/144/41,1st Floor,
                 Pudussery Galleria,
                 Cheroor P.O, Thrissur 680008,
