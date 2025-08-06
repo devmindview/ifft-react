@@ -11,12 +11,15 @@ import img1 from '../../assets/card.jpg';
 import img2 from '../../assets/card1.webp';
 import img3 from '../../assets/card2.webp';
 import partner from '../../assets/associate.webp';
+import ifftposter from '../../assets/posterifft.jpeg'
 
 import dora from '../../assets/dora.webp';
 import shaji from '../../assets/shaji.webp';
 import aruna from '../../assets/aruna.webp';
 import FadeInFromBottom from '../ui/FadeInFromBottom';
 import EventSection from '../components/EventSection';
+import { Helmet } from 'react-helmet';
+
 
 const venues = [
     {
@@ -105,6 +108,33 @@ function Home() {
 
     return (
         <>
+            <Helmet>
+                {/* General Meta Tags */}
+                <title>20th International Film Festival of Thrissur - IFFT 2025</title>
+                <meta
+                    name="description"
+                    content="The 20th International Film Festival of Thrissur (IFFT) will take place from September 26 to October 2, 2025, featuring diverse global cinema and cultural programs across Thrissur, Kerala."
+                />
+                <meta
+                    name="keywords"
+                    content="IFFT 2025, Thrissur Film Festival, Kerala Film Festival, IFFT India, International Film Festival, Cultural Events Kerala, 20th IFFT, Indian Film Festivals"
+                />
+                <meta name="author" content="IFFT Organizing Committee" />
+                <meta name="robots" content="index, follow" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="canonical" href="https://ifft.org.in/" />
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="IFFT 2025 - 20th International Film Festival of Thrissur" />
+                <meta property="og:description" content="Join us in Thrissur from Sept 26 – Oct 2, 2025 for the 20th IFFT — a celebration of international cinema and culture spread across suburban and city venues." />
+                <meta property="og:image" content="https://ifft.org.in/assets/og-image-ifft2025.jpg" /> {/* Replace with actual image */}
+                <meta property="og:url" content="https://ifft.org.in/" />
+                <meta property="og:site_name" content="International Film Festival of Thrissur" />
+
+              
+            </Helmet>
+
             <section className="relative h-screen w-full text-white overflow-hidden">
                 {/* Background Video */}
                 <div className="absolute inset-0 z-0">
@@ -128,7 +158,7 @@ function Home() {
                 {/* Centered Content */}
                 <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-4">
                     <FadeInFromBottom>
-                        <h1 className="text-5xl md:text-6xl font-bold tracking-wide text-[#ffd57c]">
+                        <h1 className="text-3xl md:text-7xl uppercase font-bold tracking-wide text-[#fccd67]">
                             International Film <br /> Festival Thrissur
                         </h1>
                     </FadeInFromBottom>
@@ -141,7 +171,18 @@ function Home() {
 
                     <FadeInFromBottom>
                         <a
-                            href="#about-home"
+                            href="#"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                const target = document.getElementById('about-home');
+                                if (target) {
+                                    const scrollTo = target.offsetTop + target.offsetHeight / 2;
+                                    window.scrollTo({
+                                        top: scrollTo,
+                                        behavior: 'smooth',
+                                    });
+                                }
+                            }}
                             className="inline-block my-6 px-6 py-2 border border-white text-white rounded-lg font-medium tracking-wide
                hover:bg-white hover:text-black transition-all duration-300 ease-in-out"
                         >
@@ -168,7 +209,7 @@ function Home() {
             {/* Upcoming events */}
             <section className="py-20 bg-gradient-to-br from-black via-black to-slate-950 text-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4">
-                    <h3 className="text-2xl md:text-3xl font-semibold mb-8">Upcoming Events</h3>
+                    <h3 className="text-2xl md:text-3xl text-gray-400 font-semibold mb-8">Upcoming Events</h3>
 
                     <div className="relative w-full overflow-hidden group">
                         <div className="flex w-max animate-scroll-card gap-6 group-hover:[animation-play-state:paused]">
@@ -240,20 +281,36 @@ function Home() {
             </section>
 
             {/* About */}
-            <section id='about-home' className="w-full py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 flex flex-col  gap-8">
+            <section id='about-home' className="w-full py-10 bg-white">
+                <div className="max-w-7xl mx-auto px-2 flex flex-col  gap-8">
                     {/* Left: Heading & Text */}
                     <div className="md:w-100">
                         <FadeInFromBottom>
-                            <h3 className="text-3xl md:text-5xl font-semibold text-gray-900">
-                                The International Film Festival of Thrissur (IFFT) is a joint venture of Thrissur Janasamskara Chalachitra Kendram, Corporation of Thrissur
-                            </h3>
+                            <div className="w-full bg-gray-50 md:rounded-xl shadow-sm flex flex-col md:flex-row-reverse items-stretch p-6 md:p-8 gap-6 md:gap-4">
+
+                                {/* Image - Right on Desktop */}
+                                <div className="md:w-1/4 w-full">
+                                    <img
+                                        src={ifftposter}
+                                        alt="IFFT Poster"
+                                        className="w-full h-full object-cover rounded-md md:rounded-lg"
+                                    />
+                                </div>
+
+                                {/* Text - Left on Desktop */}
+                                <div className="md:w-3/4 w-full flex flex-col justify-center px-2">
+                                    <h3 className="text-2xl md:text-4xl font-bold text-gray-900 leading-snug mb-4">
+                                        The International Film Festival of Thrissur (<span className='text-blue-500'>IFFT</span>) is a joint venture of Thrissur Janasamskara Chalachitra Kendram, Corporation of Thrissur
+                                    </h3>
+                                    <p className="text-sm text-gray-600 uppercase tracking-wider">
+                                        INTERNATIONAL FILM FESTIVAL OF THRISSUR (IFFT) Since 2004
+                                    </p>
+                                </div>
+
+                            </div>
                         </FadeInFromBottom>
-                        <FadeInFromBottom>
-                            <p className="mt-3 text-gray-600 tracking-wide">
-                                INTERNATIONAL FILM FESTIVAL OF THRISSUR (IFFT) Since 2004
-                            </p>
-                        </FadeInFromBottom>
+
+
 
                         <FadeInFromBottom>
                             <div className="mt-12 space-y-6 max-w-7xl">
@@ -330,7 +387,7 @@ function Home() {
             </section>
 
             {/* Details */}
-            <section className="min-h-fit pt-40 pb-32 relative bg-gradient-to-br from-green-950 via-gray-950 to-blue-950 text-white py-20 px-4 overflow-hidden">
+            <section className="min-h-fit pt-20 md:pt-40 pb-16 md:pb-32 relative bg-gradient-to-br from-green-950 via-gray-950 to-blue-950 text-white py-20 px-4 overflow-hidden">
 
                 {/* Top Slope */}
                 {/* <div className="absolute top-0 left-0 w-[110%] h-32 bg-white transform -translate-x-[5%] -translate-y-1/2 rotate-[3deg] origin-top z-10 clip-slope-top" /> */}
@@ -444,7 +501,7 @@ function Home() {
                 <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10" />
                 <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10" />
 
-                <div className="whitespace-nowrap  animate-scroll-text text-2xl md:text-8xl font-bold text-gray-800">
+                <div className="whitespace-nowrap  animate-scroll-text text-3xl md:text-8xl font-bold text-gray-800">
                     <span className="inline-block  mx-4 uppercase ">
                         Celebrating 20 Years of Cinematic Excellence. Stories That Inspire. Films That Last Forever.</span>
                 </div>
@@ -473,7 +530,7 @@ function Home() {
                 <div className="relative z-20 max-w-7xl text-start px-4">
 
                     <FadeInFromBottom>
-                        <h1 className="text-4xl md:text-8xl font-bold tracking-wide">LIGHTS BEYOND FRAMES <br /> FILM FESTIVAL 2025</h1>
+                        <h1 className="text-4xl md:text-7xl font-bold tracking-wide">LIGHTS BEYOND FRAMES <br /> FILM FESTIVAL 2025</h1>
                     </FadeInFromBottom>
                     <FadeInFromBottom>
                         <p className="mt-3 text-lg md:text-2xl/7 font-normal tracking-wide">

@@ -31,10 +31,11 @@ const Footer = () => {
             <h3 className="text-lg font-normal mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2 text-white font-light">
               <li><Link to="/" className="hover:text-gray-400">Home</Link></li>
-              <li><Link to="/" className="hover:text-gray-400">About</Link></li>
-              <li><Link to="/" className="hover:text-gray-400">Products</Link></li>
-              <li><Link to="/" className="hover:text-gray-400">Contact</Link></li>
-              <li><Link to="/" className="hover:text-gray-400">For dealers</Link></li>
+              <li><Link to="/about-us" className="hover:text-gray-400">About</Link></li>
+               <li><Link to="/" className="hover:text-gray-400">Contact</Link></li>
+              <li><Link to="/privacy-and-terms" className="hover:text-gray-400">Privacy Policy</Link></li>
+              <li><Link to="/privacy-and-terms" className="hover:text-gray-400">Terms & Conditions</Link></li>
+
             </ul>
           </div>
 
@@ -43,11 +44,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-normal mb-4 text-white">Our Experiences</h3>
             <ul className="space-y-2 text-white font-light">
-              <li><Link to="/" className="hover:text-gray-400">Home</Link></li>
-              <li><Link to="/" className="hover:text-gray-400">About</Link></li>
-              <li><Link to="/" className="hover:text-gray-400">Other</Link></li>
-              <li><Link to="/" className="hover:text-gray-400">Privacy Policy</Link></li>
-              <li><Link to="/" className="hover:text-gray-400">Terms & Conditions</Link></li>
+              <li><Link to="/" className="hover:text-gray-400">Blog</Link></li>
+              <li><Link to="/kottaka" className="hover:text-gray-400">Kottaka</Link></li>
+              <li><Link to="/twenty-ifft" className="hover:text-gray-400">20<sup>th</sup> IFFT</Link></li>
+              <li><Link to="/" className="hover:text-gray-400">ISSF 2025</Link></li>
+              <li><Link to="/" className="hover:text-gray-400">9<sup>th</sup> IFFF 2026</Link></li>
             </ul>
           </div>
 
@@ -57,7 +58,7 @@ const Footer = () => {
             <ul className="space-y-2 text-white text-sm font-light">
               <li> +91 7907196843 <br /> +91 9446763855 <br /> +91 9847002719</li>
               <li>ifftinfo2@gmail.com</li>
-              <li>20 <sup>th</sup> IFFT @KERALAINTERNATIONAL FILM FESTIVAL THRISSUR -IFFT
+              <li>20<sup>th</sup> IFFT @KERALAINTERNATIONAL FILM FESTIVAL THRISSUR -IFFT
                 Room No.7/144/41,1st Floor,
                 Pudussery Galleria,
                 Cheroor P.O, Thrissur 680008,
@@ -71,7 +72,7 @@ const Footer = () => {
             <h3 className="text-lg font-normal mb-4 text-white">Follow the Journey</h3>
             <div className="flex space-x-4 text-white font-light">
               <a
-                href="https://facebook.com" 
+                href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-600 text-xl transition"

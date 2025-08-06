@@ -7,14 +7,14 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 w-full z-20 bg-transparent text-white">
+    <header className="absolute top-0 left-0 w-full z-20 bg-black text-white">
       <div className="flex items-center justify-between px-6 py-4 md:py-6 md:px-20">
         {/* Logo */}
         <Link to={'/'} className="flex items-center">
           <img
             src={logo} // Replace with your logo
             alt="combined"
-            className="w-28 md:w-36 mr-2"
+            className="w-28 md:w-36 mr-2 grayscale brightness-[100] opacity-100"
           />
 
         </Link>
@@ -24,6 +24,9 @@ const Header = () => {
           <Link to="/" className="hover:text-blue-500">Home</Link>
           <Link to="/about-us" className="hover:text-blue-500">About</Link>
           <Link to="/twenty-ifft" className="hover:text-blue-500"> 20<sup>th</sup> IFFT </Link>
+          <Link to="/isff-2025" className="hover:text-blue-500">ISFF 2025</Link>
+          <Link to="/ifff-9th" className="hover:text-blue-500">9<sup>th </sup>IFFF 2026 </Link>
+          <Link to="/" className="hover:text-blue-500"> ICFFK 2025 </Link>
           <Link to="/kottaka" className="hover:text-blue-500">Kottaka</Link>
 
         </nav>
@@ -83,6 +86,12 @@ const Header = () => {
             <Link to="/about-us" className="block hover:text-blue-500">About</Link>
             <hr />
             <Link to="/twenty-ifft" className="block hover:text-blue-500">IFFT 20 <sup>th</sup> </Link>
+            <hr />
+            <Link to="/isff-2025" className="block hover:text-blue-500">ISFF 2025</Link>
+            <hr />
+            <Link to="/ifff-9th" className="block hover:text-blue-500">9<sup>th </sup>IFFF 2026 </Link>
+            <hr />
+                        <Link to="/" className="block hover:text-blue-500"> ICFFK 2025 </Link>
             <hr />
             <Link to="/kottaka" className="block hover:text-blue-500">Kottaka </Link>
             <hr />

@@ -68,10 +68,10 @@ const magazines = [
 
 function Kottaka() {
   return (
-    <section className=" bg-gradient-to-br from-blue-950 via-black to-green-950 py-16 md:py-28">
+    <section className=" bg-white py-16 md:py-28">
       <div className="max-w-7xl mx-auto px-4">
-        <h3 className="text-lg md:text-2xl text-blue-500 font-medium text-center mb-10">Kottaka Issues - List</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* <h3 className="text-lg md:text-2xl text-red-800 font-medium text-center  my-10">Kottaka Issues - List</h3> */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-11 md:mt-24">
           {magazines.map((mag) => (
             <div key={mag.id} className="flex flex-col items-center">
               <FadeInFromBottom>
