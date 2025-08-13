@@ -81,19 +81,19 @@ const Header = () => {
 
           {/* Menu Links */}
           <nav className="space-y-5 text-white font-medium text-sm">
-            <Link to="/" className="block hover:text-blue-500">Home</Link>
+            <Link to="/" className="block hover:text-blue-500" onClick={() => setMenuOpen(false)}>Home</Link>
             <hr />
-            <Link to="/about-us" className="block hover:text-blue-500">About</Link>
+            <Link to="/about-us" className="block hover:text-blue-500" onClick={() => setMenuOpen(false)}>About</Link>
             <hr />
-            <Link to="/twenty-ifft" className="block hover:text-blue-500">IFFT 20 <sup>th</sup> </Link>
+            <Link to="/twenty-ifft" className="block hover:text-blue-500" onClick={() => setMenuOpen(false)}>IFFT 20 <sup>th</sup> </Link>
             <hr />
-            <Link to="/isff-2025" className="block hover:text-blue-500">ISFF 2025</Link>
+            <Link to="/isff-2025" className="block hover:text-blue-500" onClick={() => setMenuOpen(false)}>ISFF 2025</Link>
             <hr />
-            <Link to="/ifff-9th" className="block hover:text-blue-500">9<sup>th </sup>IFFF 2026 </Link>
+            <Link to="/ifff-9th" className="block hover:text-blue-500" onClick={() => setMenuOpen(false)}>9<sup>th </sup>IFFF 2026 </Link>
             <hr />
-                        <Link to="/" className="block hover:text-blue-500"> ICFFK 2025 </Link>
+                        <Link to="/" className="block hover:text-blue-500" onClick={() => setMenuOpen(false)}> ICFFK 2025 </Link>
             <hr />
-            <Link to="/kottaka" className="block hover:text-blue-500">Kottaka </Link>
+            <Link to="/kottaka" className="block hover:text-blue-500" onClick={() => setMenuOpen(false)}>Kottaka </Link>
             <hr />
 
           </nav>

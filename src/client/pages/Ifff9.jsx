@@ -15,8 +15,8 @@ function Ifff9() {
         <meta name="keywords" content="IFFF, IFFF, Film Festival Thrissur, Folklore Films, Cultural Festival India, IFFT 2026" />
         <meta property="og:title" content="IFFF 2026 - International Folklore Film Festival" />
         <meta property="og:description" content="The 9th IFFF will showcase folklore-themed short films and documentaries from around the world. Hybrid format: online + offline screenings." />
-        <meta property="og:image" content="https://ifft.org.in/your-actual-image-path.jpg" />
-        <meta property="og:url" content="https://ifft.org.in/ifff9" />
+        <meta property="og:image" content="https://ifft.org.in/ifff.jpeg" />
+        <meta property="og:url" content="https://ifft.org.in/ifff-9th" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 

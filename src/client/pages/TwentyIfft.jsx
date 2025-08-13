@@ -7,36 +7,68 @@ function TwentyIfft() {
     return (
         <div>
             {/* SEO Meta Tags */}
-<Helmet>
-  <title>20th International Film Festival of Thrissur - IFFT 2025</title>
-  <meta
-    name="description"
-    content="The 20th International Film Festival of Thrissur (IFFT) will be held from September 26 to October 2, 2025. Screenings and cultural programs across Thrissur, Kerala."
-  />
-  <meta
-    name="keywords"
-    content="IFFT 2025, Film Festival Kerala, Thrissur Film Festival, 20th IFFT, IFFT India, International Film Festival Thrissur, Cultural Festival Kerala"
-  />
-  <meta
-    property="og:title"
-    content="IFFT 2025 - 20th International Film Festival of Thrissur"
-  />
-  <meta
-    property="og:description"
-    content="The Twentieth Edition of IFFT will run from 26th September to 2nd October 2025, expanding to venues across suburban Thrissur. Join us for a week of global cinema and culture."
-  />
-  <meta
-    property="og:image"
-    content="https://ifft.org.in/assets/ifft2025-og.jpg"  // Replace with actual OG image path
-  />
-  <meta
-    property="og:url"
-    content="https://ifft.org.in/ifft2025"
-  />
-  <meta name="twitter:card" content="summary_large_image" />
-</Helmet>
+            <Helmet>
+                <title>20th International Film Festival of Thrissur - IFFT 2025</title>
+                <meta
+                    name="description"
+                    content="The 20th International Film Festival of Thrissur (IFFT) will be held from September 26 to October 2, 2025. Screenings and cultural programs across Thrissur, Kerala."
+                />
+                <meta
+                    name="keywords"
+                    content="IFFT 2025, Film Festival Kerala, Thrissur Film Festival, 20th IFFT, IFFT India, International Film Festival Thrissur, Cultural Festival Kerala"
+                />
+                <meta
+                    property="og:title"
+                    content="IFFT 2025 - 20th International Film Festival of Thrissur"
+                />
+                <meta
+                    property="og:description"
+                    content="The Twentieth Edition of IFFT will run from 26th September to 2nd October 2025, expanding to venues across suburban Thrissur. Join us for a week of global cinema and culture."
+                />
+                <meta
+                    property="og:image"
+                    content="https://ifft.org.in/assets/ifft.jpeg"  // Replace with actual OG image path
+                />
+                <meta
+                    property="og:url"
+                    content="https://ifft.org.in/twenty-ifft"
+                />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
+            <section className="flex flex-col md:flex-row justify-center items-center w-full min-h-screen  bg-white px-4 pt-28 md:pt-5">
+                <div className="flex flex-col md:flex-row w-full max-w-7xl">
 
-            <section className="relative min-h-screen w-full text-black overflow-hidden bg-white  pt-28 md:pt-40 pb-12">
+                    {/* Left Image */}
+                    <div className="md:w-1/2 w-full h-auto md:h-[60vh] aspect-square">
+                        <img
+                            src={shaji}
+                            alt="Old Patron"
+                            className="w-full h-full object-cover grayscale"
+                        />
+                    </div>
+
+                    {/* Right Content */}
+                    <div className="md:w-1/2 w-full flex items-center justify-center p-3 md:px-12">
+                        <div>
+                            <h2 className="text-3xl md:text-4xl uppercase font-bold text-gray-900 mb-4">
+                                In Dedication to Our Esteemed Patron
+                            </h2>
+                            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                                The International Film Festival of Thrissur pays heartfelt tribute to the guiding soul who shaped the cultural identity of our cinematic journey. His commitment to authentic storytelling and visual poetry has left a lasting legacy.
+                            </p>
+                            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                                As a pioneer in Malayalam cinema, he brought global recognition to Indian filmmaking. His works continue to influence generations of directors and film lovers.
+                            </p>
+                            <p className="text-lg text-gray-700 leading-relaxed">
+                                We proudly honor <strong>Shaji N. Karun</strong> for his timeless contributions to cinema. Read more on his life and achievements on <a href="https://en.wikipedia.org/wiki/Shaji_N._Karun" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Wikipedia</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section className="relative min-h-screen w-full text-black overflow-hidden bg-white pt-10">
                 <div className="absolute inset-0">
                     {/* Optional: Add a darkened film-related background image or video here */}
                     <div className="w-full h-full " />
@@ -58,7 +90,7 @@ function TwentyIfft() {
                         </p>
 
                     </FadeInFromBottom>
-                    <hr className='bg-black'/>
+                    <hr className='bg-black' />
                     <div className="text-left w-full max-w-7xl  p-2 rounded-2xl backdrop-blur-md  mt-4">
                         <FadeInFromBottom>
                             <div className="mb-4 space-y-2 max-w-7xl">
@@ -134,38 +166,6 @@ function TwentyIfft() {
                         <p className="mt-6 text-lg font-semibold text-gray-600">50+ Movies</p>
 
                     </FadeInFromBottom>
-                </div>
-            </section>
-            <section className="flex flex-col md:flex-row justify-center items-center w-full min-h-fit bg-white px-4 py-12">
-                <div className="flex flex-col md:flex-row w-full max-w-7xl">
-
-                    {/* Left Image */}
-                    <div className="md:w-1/2 w-full h-auto md:h-[60vh] aspect-square">
-                        <img
-                            src={shaji}
-                            alt="Old Patron"
-                            className="w-full h-full object-cover grayscale"
-                        />
-                    </div>
-
-                    {/* Right Content */}
-                    <div className="md:w-1/2 w-full flex items-center justify-center p-3 md:px-12">
-                        <div>
-                            <h2 className="text-3xl md:text-4xl uppercase font-bold text-gray-900 mb-4">
-                                In Dedication to Our Esteemed Patron
-                            </h2>
-                            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                                The International Film Festival of Thrissur pays heartfelt tribute to the guiding soul who shaped the cultural identity of our cinematic journey. His commitment to authentic storytelling and visual poetry has left a lasting legacy.
-                            </p>
-                            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                                As a pioneer in Malayalam cinema, he brought global recognition to Indian filmmaking. His works continue to influence generations of directors and film lovers.
-                            </p>
-                            <p className="text-lg text-gray-700 leading-relaxed">
-                                We proudly honor <strong>Shaji N. Karun</strong> for his timeless contributions to cinema. Read more on his life and achievements on <a href="https://en.wikipedia.org/wiki/Shaji_N._Karun" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Wikipedia</a>.
-                            </p>
-                        </div>
-                    </div>
-
                 </div>
             </section>
 

@@ -20,6 +20,8 @@ import FadeInFromBottom from '../ui/FadeInFromBottom';
 import EventSection from '../components/EventSection';
 import { Helmet } from 'react-helmet';
 
+import up1 from '../../assets/upcoming/upcoming.jpeg'
+
 
 const venues = [
     {
@@ -110,7 +112,7 @@ function Home() {
         <>
             <Helmet>
                 {/* General Meta Tags */}
-                <title>20th International Film Festival of Thrissur - IFFT 2025</title>
+                <title> Home - 20th International Film Festival of Thrissur - IFFT 2025</title>
                 <meta
                     name="description"
                     content="The 20th International Film Festival of Thrissur (IFFT) will take place from September 26 to October 2, 2025, featuring diverse global cinema and cultural programs across Thrissur, Kerala."
@@ -128,11 +130,11 @@ function Home() {
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="IFFT 2025 - 20th International Film Festival of Thrissur" />
                 <meta property="og:description" content="Join us in Thrissur from Sept 26 – Oct 2, 2025 for the 20th IFFT — a celebration of international cinema and culture spread across suburban and city venues." />
-                <meta property="og:image" content="https://ifft.org.in/assets/og-image-ifft2025.jpg" /> {/* Replace with actual image */}
+                <meta property="og:image" content="https://ifft.org.in/assets/ifft.jpeg" /> {/* Replace with actual image */}
                 <meta property="og:url" content="https://ifft.org.in/" />
                 <meta property="og:site_name" content="International Film Festival of Thrissur" />
 
-              
+
             </Helmet>
 
             <section className="relative h-screen w-full text-white overflow-hidden">
@@ -217,62 +219,65 @@ function Home() {
                                 [
                                     {
                                         id: 1,
-                                        title: "Opening Ceremony",
-                                        date: "Nov 10, 2024",
-                                        image: "/events/opening.jpg",
-                                        location: "Kairali Theatre, Thrissur",
+                                        title: "ISFF 2025 INTERNATIONAL science Film Festival",
+                                        date: "August 8,9,10",
+                                        image: up1,
+                                        location: "Kairali / Sree തിയേറ്റർ,Thrissur ",
                                     },
                                     {
                                         id: 2,
-                                        title: "Global Cinema Showcase",
-                                        date: "Nov 11, 2024",
+                                        title: "20th International Film Festival of Thrissur",
+                                        date: "2025 September 26",
                                         image: "/events/global.jpg",
-                                        location: "Ravikrishna Theatre",
+                                        location: "Kairali / Sree തിയേറ്റർ,Thrissur ",
                                     },
                                     {
                                         id: 3,
-                                        title: "Directors' Panel Talk",
-                                        date: "Nov 12, 2024",
-                                        image: "/events/panel.jpg",
-                                        location: "Medlycot Hall",
+                                        title: "ISFF 2025 INTERNATIONAL science Film Festival",
+                                        date: "August 8,9,10",
+                                        image: up1,
+                                        location: "Kairali / Sree തിയേറ്റർ,Thrissur ",
                                     },
                                     {
                                         id: 4,
-                                        title: "Short Film Night",
-                                        date: "Nov 13, 2024",
+                                        title: "20th International Film Festival of Thrissur",
+                                        date: "2025 September 26",
                                         image: "/events/shorts.jpg",
-                                        location: "Jos Theatre",
+                                        location: "Kairali / Sree തിയേറ്റർ,Thrissur ",
                                     },
                                     {
                                         id: 5,
-                                        title: "Award Ceremony",
-                                        date: "Nov 14, 2024",
-                                        image: "/events/awards.jpg",
-                                        location: "St. Thomas College",
+                                        title: "ISFF 2025 INTERNATIONAL science Film Festival",
+                                        date:  "August 8,9,10",
+                                        image:  up1,
+                                        location: "Kairali / Sree തിയേറ്റർ,Thrissur ",
                                     },
                                     {
                                         id: 6,
-                                        title: "Closing Gala",
-                                        date: "Nov 15, 2024",
+                                        title: "20th International Film Festival of Thrissur",
+                                        date: "2025 September 26",
                                         image: "/events/closing.jpg",
-                                        location: "Kairali Theatre",
+                                        location: "Kairali / Sree തിയേറ്റർ,Thrissur ",
                                     },
                                 ].map((event, index) => (
                                     <div
                                         key={`${event.id}-${index}`}
                                         className="min-w-[280px] max-w-xs bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-md overflow-hidden"
                                     >
-                                        <img
-                                            src={event.image}
-                                            alt={event.title}
-                                            className="w-full h-16 md:h-24 object-cover"
-                                        />
-                                        <div className="p-4">
-                                            <h3 className="text-lg font-semibold mb-1">{event.title}</h3>
+                                        <div className="w-full aspect-[16/9]">
+                                            <img
+                                                src={event.image}
+                                                alt={event.title}
+                                                className="w-full h-full object-cover" // Or use 'object-contain' if you want to avoid cropping
+                                            />
+                                        </div>
+                                        <div className="p-2">
+                                            <h3 className="text-base font-medium mb-1">{event.title}</h3>
                                             <p className="text-sm text-gray-300">{event.date}</p>
                                             <p className="text-sm text-gray-400">{event.location}</p>
                                         </div>
                                     </div>
+
                                 ))
                             )}
                         </div>
@@ -395,7 +400,7 @@ function Home() {
                     {/* Heading */}
                     <FadeInFromBottom>
                         <p className="text-4xl md:text-5xl font-extrabold tracking-wide  leading-tight mb-6">
-                            20<sup>th</sup> International Film Festival of  Thrissur (IFFT 2.0)
+                            20<sup>th</sup> International Film Festival of  Thrissur (IFFT 2025)
                         </p>
                     </FadeInFromBottom>
                     <FadeInFromBottom>

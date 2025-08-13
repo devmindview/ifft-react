@@ -1,10 +1,37 @@
 import React from 'react'
 import hero from '../../assets/hero-2.jpg'
 import FadeInFromBottom from '../ui/FadeInFromBottom'
+import { Helmet } from 'react-helmet';
 
 function About() {
     return (
         <>
+            <Helmet>
+                {/* General Meta Tags */}
+                <title>About Us - IFFT Thrissur - 2025</title>
+                <meta
+                    name="description"
+                    content="The 20th International Film Festival of Thrissur (IFFT) will take place from September 26 to October 2, 2025, featuring diverse global cinema and cultural programs across Thrissur, Kerala."
+                />
+                <meta
+                    name="keywords"
+                    content="IFFT 2025, Thrissur Film Festival, Kerala Film Festival, IFFT India, International Film Festival, Cultural Events Kerala, 20th IFFT, Indian Film Festivals"
+                />
+                <meta name="author" content="IFFT Organizing Committee" />
+                <meta name="robots" content="index, follow" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="canonical" href="https://ifft.org.in/" />
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="IFFT 2025 - 20th International Film Festival of Thrissur" />
+                <meta property="og:description" content="Join us in Thrissur from Sept 26 – Oct 2, 2025 for the 20th IFFT — a celebration of international cinema and culture spread across suburban and city venues." />
+                <meta property="og:image" content="https://ifft.org.in/assets/ifft.jpeg" /> {/* Replace with actual image */}
+                <meta property="og:url" content="https://ifft.org.in/about-us" />
+                <meta property="og:site_name" content="International Film Festival of Thrissur" />
+
+
+            </Helmet>
             <section className="relative min-h-screen md:h-screen pb-5 w-full text-white overflow-hidden">
                 {/* Background image */}
                 <div className="absolute inset-0">

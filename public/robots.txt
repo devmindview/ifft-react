@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ifft.org.in/sitemap.xml
