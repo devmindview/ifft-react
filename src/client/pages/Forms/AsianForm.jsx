@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import qr from '../../../assets/Qr/qrcode.jpeg'
+import qricon from '../../../assets/Qr/qr-icon.png'
+import shaji from '../../../assets/shaji.webp'
+import aruna from '../../../assets/aruna.webp'
+
 
 function AsianForm() {
     const [formData, setFormData] = useState({
@@ -9,7 +14,6 @@ function AsianForm() {
         title_english: "",
         film_language: "",
         subtitles: "",
-        director_name: "",
         film_type: "",
         is_first_or_second_feature: "",
         duration_minutes: "",
@@ -17,20 +21,26 @@ function AsianForm() {
         country_of_origin: "",
         technical_features: "",
         origination_format: "",
-        presentation_format: "",
+        presentation_format: "DCP",
         producer_name: "",
         producer_email: "",
         producer_mobile: "",
+        director_name: "",
+        director_email: "",
+        director_mobile: "",
+        biography: "",
         screener_link: "",
+        screener_link_password: "NO",
         synopsis_long: "",
         synopsis_short: "",
-        stills: "",
-        director_photo: null,
-        biography: "",
+        stills_link: "",
         cast_and_crew: "",
-        producer_consent_name: "",
-        correspondence_address: "",
+        name_of_submitter: "",
+        correspondence_contact: "",
         correspondence_email: "",
+        film_poster: null,
+        director_photo: null,
+        producer_consent: null,
         documentation: null,
         signature: null,
         screenshot: null,
@@ -81,7 +91,6 @@ function AsianForm() {
                 title_english: "",
                 film_language: "",
                 subtitles: "",
-                director_name: "",
                 film_type: "",
                 is_first_or_second_feature: "",
                 duration_minutes: "",
@@ -89,20 +98,26 @@ function AsianForm() {
                 country_of_origin: "",
                 technical_features: "",
                 origination_format: "",
-                presentation_format: "",
+                presentation_format: "DCP",
                 producer_name: "",
                 producer_email: "",
                 producer_mobile: "",
+                director_name: "",
+                director_email: "",
+                director_mobile: "",
+                biography: "",
                 screener_link: "",
+                screener_link_password: "NO",
                 synopsis_long: "",
                 synopsis_short: "",
-                stills: "",
-                director_photo: "",
-                biography: "",
+                stills_link: "",
                 cast_and_crew: "",
-                producer_consent_name: "",
-                correspondence_address: "",
+                name_of_submitter: "",
+                correspondence_contact: "",
                 correspondence_email: "",
+                film_poster: null,
+                director_photo: null,
+                producer_consent: null,
                 documentation: null,
                 signature: null,
                 screenshot: null,
@@ -113,32 +128,77 @@ function AsianForm() {
         }
     };
 
+
     return (
         <section className="bg-gray-100 min-h-screen py-16 md:py-32">
             <ToastContainer position="top-right" autoClose={3000} />
-            <div className="max-w-6xl mx-auto bg-white p-8 rounded-lg shadow">
-                <div className="text-center mb-6">
-                    <p className="text-sm font-semibold text-blue-500">
-                        20th IFFT - ARUNA VASUDEV ASIAN Film Award 2025 For Best Debut
-                        Director in ASIAN Cinema
-                    </p>
+            <div className="max-w-6xl mx-auto bg-white px-2 py-6 rounded-lg shadow">
+                <div className="flex flex-col md:flex-row items-center md:items-start justify-center mb-6">
+                    {/* Left Image */}
+                    <div className="hidden md:block w-68 h-68">
+                        <img
+                            src={shaji}
+                            alt="Left"
+                            className="w-[68px] h-[68px] object-cover rounded shadow"
+                        />
+                    </div>
+
+                    {/* Text */}
+                    <div className="text-center px-2 md:px-8">
+                        <p className="text-lg font-semibold text-blue-500">
+                            20th IFFT Film Awards 2025 <br />
+                            Shaji N Karun Award – Best Asian Debut Movie (₹1,00,000) <br />
+                            Aruna Vasudev Award – Best Asian Debut Director (₹1,00,000)
+                        </p>
+                    </div>
+
+                    {/* Right Image */}
+                    <div className="hidden md:block w-68 h-68">
+                        <img
+                            src={aruna}
+                            alt="Right"
+                            className="w-[68px] h-[68px] object-cover rounded shadow"
+                        />
+                    </div>
+
+                    {/* Mobile Images */}
+                    <div className="flex md:hidden mt-4 space-x-4">
+                        <img
+                            src={shaji}
+                            alt="Left Mobile"
+                            className="w-[68px] h-[68px] object-cover rounded shadow"
+                        />
+                        <img
+                            src={aruna}
+                            alt="Right Mobile"
+                            className="w-[68px] h-[68px] object-cover rounded shadow"
+                        />
+                    </div>
                 </div>
+
+
 
                 {/* QR Code for Payment */}
                 <div className="text-center mb-6 p-4 bg-gray-50 rounded-lg">
                     <h3 className="font-bold text-lg mb-2">Submission Fee Payment</h3>
-                    <p className="text-sm mb-4">Please pay the submission fee of ₹5000/- (for Indian entries) or $10 (for international entries)</p>
+                    <p className="text-base mb-4">
+                        Please pay the submission fee of ₹5000/ $60</p>
                     <div className="flex flex-col md:flex-row justify-center items-center gap-8">
                         <div>
-                            <p className="font-medium mb-2">For Indian Payments:</p>
-                            <img
-                                src="/images/indian-payment-qr.png"
-                                alt="Indian Payment QR Code"
-                                className="mx-auto w-48 h-48 border p-2 bg-white"
-                            />
-                            <p className="text-sm mt-2">UPI ID: ifft@examplebank</p>
+                            <p className="font-medium text-gray-500 mb-2">Click to download</p>
+
+                            <a href={qr} download="upi-qr.png">
+                                <img
+                                    src={qricon}
+                                    alt="Indian Payment QR Code"
+                                    className="mx-auto w-48 h-48 border p-2 bg-white cursor-pointer"
+                                />
+                            </a>
+
+                            <p className="text-sm mt-2">UPI ID: 9496168654@cnrb</p>
                         </div>
-                        <div>
+
+                        {/* <div>
                             <p className="font-medium mb-2">For International Payments:</p>
                             <img
                                 src="/images/international-payment-qr.png"
@@ -146,11 +206,10 @@ function AsianForm() {
                                 className="mx-auto w-48 h-48 border p-2 bg-white"
                             />
                             <p className="text-sm mt-2">PayPal: payments@ifft.org</p>
-                        </div>
+                        </div> */}
                     </div>
                     <p className="text-sm mt-4 text-red-500">* Please upload the payment screenshot in the form below</p>
                 </div>
-
                 <form className="space-y-6" onSubmit={handleSubmit}>
                     {/* Section 1: Film Details */}
                     <div className="border-b pb-4">
@@ -200,35 +259,39 @@ function AsianForm() {
 
                         <div className="mb-4">
                             <label className="block font-normal mb-1">
-                                1.4 Subtitles (if any)
+                                1.4 Subtitles English
                             </label>
-                            <input
-                                type="text"
-                                name="subtitles"
-                                value={formData.subtitles}
-                                onChange={handleChange}
-                                className="w-full border p-2 rounded"
-                                required
-                            />
+
+                            <div className="flex items-center gap-4">
+                                <label className="flex items-center">
+                                    <input
+                                        type="radio"
+                                        name="subtitles"
+                                        value="Yes"
+                                        checked={formData.subtitles === "Yes"}
+                                        onChange={handleChange}
+                                        required
+                                    />
+                                    <span className="ml-2">Yes</span>
+                                </label>
+
+                                <label className="flex items-center">
+                                    <input
+                                        type="radio"
+                                        name="subtitles"
+                                        value="No"
+                                        checked={formData.subtitles === "No"}
+                                        onChange={handleChange}
+                                    />
+                                    <span className="ml-2">No</span>
+                                </label>
+                            </div>
                         </div>
+
 
                         <div className="mb-4">
                             <label className="block font-normal mb-1">
-                                1.5 Director's Name
-                            </label>
-                            <input
-                                type="text"
-                                name="director_name"
-                                value={formData.director_name}
-                                onChange={handleChange}
-                                className="w-full border p-2 rounded"
-                                required
-                            />
-                        </div>
-
-                        <div className="mb-4">
-                            <label className="block font-normal mb-1">
-                                1.6 Type of Film (Fiction/Non-Fiction/Experimental/Animation)
+                                1.6 Type of Film (Fiction/Experimental/Other)
                             </label>
                             <select
                                 name="film_type"
@@ -239,9 +302,7 @@ function AsianForm() {
                             >
                                 <option value="" disabled>Select</option>
                                 <option value="Fiction">Fiction</option>
-                                <option value="Non-Fiction">Non-Fiction</option>
                                 <option value="Experimental">Experimental</option>
-                                <option value="Animation">Animation</option>
                                 <option value="Documentary">Documentary</option>
                                 <option value="Short Film">Short Film</option>
                                 <option value="Feature Film">Feature Film</option>
@@ -261,8 +322,8 @@ function AsianForm() {
                                 required
                             >
                                 <option value="" disabled>Select</option>
-                                <option value="First">First Feature Film</option>
-                                <option value="Second">Second Feature Film</option>
+                                <option value="First">First Film</option>
+                                <option value="Second">Second Film</option>
                                 <option value="Second">No</option>
                             </select>
                         </div>
@@ -325,7 +386,7 @@ function AsianForm() {
 
                         <div className="mb-4">
                             <label className="block font-normal mb-1">
-                                1.12 Origination Format (Digital/16mm/35mm/Other)
+                                1.12 Origination Format (Digital/Other)
                             </label>
                             <input
                                 type="text"
@@ -339,7 +400,7 @@ function AsianForm() {
 
                         <div className="mb-4">
                             <label className="block font-normal mb-1">
-                                1.13 Presentation Format (DCP/Blu-ray/Other)
+                                1.13 Presentation Format (DCP Only allowed)
                             </label>
                             <input
                                 type="text"
@@ -354,7 +415,7 @@ function AsianForm() {
 
                     {/* Section 2: Producer Details */}
                     <div className="border-b pb-4">
-                        <h3 className="font-bold text-lg mb-4">2. Producer Details</h3>
+                        <h3 className="font-bold text-lg mb-4">2. Producer/Director Details</h3>
 
                         <div className="mb-4">
                             <label className="block font-normal mb-1">
@@ -383,7 +444,6 @@ function AsianForm() {
                                 required
                             />
                         </div>
-
                         <div className="mb-4">
                             <label className="block font-normal mb-1">
                                 2.3 Producer's Mobile Number
@@ -397,10 +457,76 @@ function AsianForm() {
                                 required
                             />
                         </div>
+                        <div className="mb-4">
+                            <label className="block font-normal mb-1">
+                                2.4 Director's Name
+                            </label>
+                            <input
+                                type="text"
+                                name="director_name"
+                                value={formData.director_name}
+                                onChange={handleChange}
+                                className="w-full border p-2 rounded"
+                                required
+                            />
+                        </div>
 
                         <div className="mb-4">
                             <label className="block font-normal mb-1">
-                                2.4 Screener Link (Vimeo/YouTube/Google Drive with password if any)
+                                2.5 Director's Email
+                            </label>
+                            <input
+                                type="email"
+                                name="director_email"
+                                value={formData.director_email}
+                                onChange={handleChange}
+                                className="w-full border p-2 rounded"
+                                required
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label className="block font-normal mb-1">
+                                2.6 Director's Mobile Number
+                            </label>
+                            <input
+                                type="tel"
+                                name="director_mobile"
+                                value={formData.director_mobile}
+                                onChange={handleChange}
+                                className="w-full border p-2 rounded"
+                                required
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label className="block font-normal mb-1">
+                                2.7 Director's Photo (High Quality * <sup>Below 5 mb</sup> )
+                            </label>
+                            <input
+                                type="file"
+                                name="director_photo"
+                                accept="image/*"
+                                onChange={handleChange}
+                                className="w-full border p-2 rounded"
+                                required
+                            />
+                        </div>
+
+                        <div className="mb-4">
+                            <label className="block font-normal mb-1">
+                                2.8 Director's Biography (200 words max)
+                            </label>
+                            <textarea
+                                name="biography"
+                                value={formData.biography}
+                                onChange={handleChange}
+                                className="w-full border p-2 rounded"
+                                rows="4"
+                                required
+                            ></textarea>
+                        </div>
+                        <div className="mb-4">
+                            <label className="block font-normal mb-1">
+                                2.9 Screener Link (Vimeo/YouTube/Other - <sup>*Please make sure enter url/Link</sup> )
                             </label>
                             <input
                                 type="url"
@@ -411,6 +537,20 @@ function AsianForm() {
                                 required
                             />
                         </div>
+                        <div className="mb-4">
+                            <label className="block font-normal mb-1">
+                                2.9 Screener Link Password <span className="text-gray-500">(If none, will be set to "NO")</span>
+                            </label>
+                            <input
+                                type="text"
+                                name="screener_link_password"
+                                value={formData.screener_link_password}
+                                placeholder="Enter password (leave empty if none)"
+                                onChange={handleChange}
+                                className="w-full border p-2 rounded"
+                            />
+                        </div>
+
                     </div>
 
                     {/* Section 3: Film Information */}
@@ -447,49 +587,23 @@ function AsianForm() {
 
                         <div className="mb-4">
                             <label className="block font-normal mb-1">
-                                3.3 Stills from the Film (Enter Drive <Link:manifest></Link:manifest> with Access)
+                                3.3 Stills from the Film (Enter Google Drive Link with Access <sup>*Please make sure enter url/Link</sup>)
                             </label>
                             <input
-                                type="text"
-                                name="stills"
-                                value={formData.stills}
+                                type="url"
+                                name="stills_link"
+                                value={formData.stills_link}
                                 onChange={handleChange}
                                 className="w-full border p-2 rounded"
                                 required
                             />
                         </div>
 
-                        <div className="mb-4">
-                            <label className="block font-normal mb-1">
-                                3.4 Director's Photo (High resolution)
-                            </label>
-                            <input
-                                type="file"
-                                name="director_photo"
-                                accept="image/*"
-                                onChange={handleChange}
-                                className="w-full border p-2 rounded"
-                                required
-                            />
-                        </div>
+
 
                         <div className="mb-4">
                             <label className="block font-normal mb-1">
-                                3.5 Director's Biography (200 words max)
-                            </label>
-                            <textarea
-                                name="biography"
-                                value={formData.biography}
-                                onChange={handleChange}
-                                className="w-full border p-2 rounded"
-                                rows="4"
-                                required
-                            ></textarea>
-                        </div>
-
-                        <div className="mb-4">
-                            <label className="block font-normal mb-1">
-                                3.6 Cast and Crew List
+                                3.4 Cast and Crew List
                             </label>
                             <textarea
                                 name="cast_and_crew"
@@ -500,20 +614,43 @@ function AsianForm() {
                                 required
                             ></textarea>
                         </div>
+                        <div className="mb-4">
+                            <label className="block font-normal mb-1">
+                                3.5 Film Poster (High Quality - <sup>* Below 5 MB</sup> )
+                            </label>
+                            <input
+                                type="file"
+                                name="film_poster"
+                                accept="image/*"
+                                onChange={handleChange}
+                                className="w-full border p-2 rounded"
+                                required
+                            />
+                        </div>
                     </div>
 
                     {/* Section 4: Declaration */}
                     <div className="border-b pb-4">
-                        <h3 className="font-bold text-lg mb-4">4. Declaration</h3>
-
-                        <div className="mb-4">
+                        <h3 className="font-bold text-lg mb-1">4. Declaration</h3>
+                        <small className="text-gray-600">20th IFFT - is organized and hosted by THRISSUR-JANASAMSKARA-CHALACHITRA KENDRAM is a charitable,cultural and educational organization devoted to celebrating excellence in film and the moving image.  I ACCEPT RESPONSIBILITY for the accuracy of the information supplied in sections and I authorize the Festival to reproduce company contact information in its publications exactly as supplied below.personal information supplied in the application solely to facilitate management and administration of its activities and responsibilities as it relates to the film being submitted. IFFT - safeguards this personal information against loss, theft and unauthorized access or disclosure. By supplying this personal information you consent to its use
+                            <br />
+                            <a
+                                href="/INDIAN DEBUT FILMS .pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 underline hover:text-blue-800"
+                            >
+                                View Rules & Regulations (PDF)
+                            </a>
+                        </small>
+                        <div className="mb-4 mt-3">
                             <label className="block font-normal mb-1">
-                                4.1 Producer's Consent Name
+                                4.1 Name of Submitter
                             </label>
                             <input
                                 type="text"
-                                name="producer_consent_name"
-                                value={formData.producer_consent_name}
+                                name="name_of_submitter"
+                                value={formData.name_of_submitter}
                                 onChange={handleChange}
                                 className="w-full border p-2 rounded"
                                 required
@@ -522,16 +659,16 @@ function AsianForm() {
 
                         <div className="mb-4">
                             <label className="block font-normal mb-1">
-                                4.2 Correspondence Address
+                                4.2 Correspondence Contact Number
                             </label>
-                            <textarea
-                                name="correspondence_address"
-                                value={formData.correspondence_address}
+                            <input
+                                type="tel"
+                                name="correspondence_contact"
+                                value={formData.correspondence_contact}
                                 onChange={handleChange}
                                 className="w-full border p-2 rounded"
-                                rows="3"
                                 required
-                            ></textarea>
+                            />
                         </div>
 
                         <div className="mb-4">
@@ -547,10 +684,22 @@ function AsianForm() {
                                 required
                             />
                         </div>
-
                         <div className="mb-4">
                             <label className="block font-normal mb-1">
-                                4.4 Documentation (Upload any supporting documents in PDF format <sup>*Below 5 mb</sup>)
+                                4.4 producers consent ( <sup>*Below 5 mb</sup>  )
+                            </label>
+                            <input
+                                type="file"
+                                name="producer_consent"
+                                accept="application/pdf,image/*"
+                                onChange={handleChange}
+                                className="w-full border p-2 rounded"
+                                required
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label className="block font-normal mb-1">
+                                4.5 Documentation (Upload any supporting documents in PDF format <sup>*Below 5 mb</sup>)
                             </label>
                             <input
                                 type="file"
@@ -564,7 +713,7 @@ function AsianForm() {
 
                         <div className="mb-4">
                             <label className="block font-normal mb-1">
-                                4.5 Signature (Upload scanned signature <sup>*Below 5 mb</sup>)
+                                4.6 Signature (Upload scanned signature <sup>*Below 5 mb</sup>)
                             </label>
                             <input
                                 type="file"
@@ -595,11 +744,15 @@ function AsianForm() {
                             />
                         </div>
                     </div>
+                    <p className="text-sm mt-4 text-orange-600">
+                        * Note: Please ensure all fields are filled and each file/image is under 5MB.
+                    </p>
+
 
                     <div className="text-center mt-6">
                         <button
                             type="submit"
-                            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                            className="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-medium"
                         >
                             Submit Form
                         </button>

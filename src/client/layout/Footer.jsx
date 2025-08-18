@@ -109,7 +109,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-slate-300 pt-6 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-2">
-          <p>&copy; 2025 IFF Thrissur. All rights reserved.</p>
+          <p>&copy; 2025 IFFT Thrissur. All rights reserved.</p>
           <p>Developed by - <a target='_blank' href="https://mindviewcreative.com/">Mindview Creative Solutions</a></p>
         </div>
       </div>

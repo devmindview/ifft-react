@@ -39,3 +39,7 @@ h2 {
 .animate-soft-blink {
   animation: soft-blink 1.5s infinite;
 }
+
+label{
+  color: #424242;
+}

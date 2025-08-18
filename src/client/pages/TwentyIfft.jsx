@@ -2,6 +2,7 @@ import React from 'react'
 import FadeInFromBottom from '../ui/FadeInFromBottom'
 import shaji from '../../assets/shajipatron.jpg'
 import { Helmet } from 'react-helmet';
+import { Link, Links } from 'react-router-dom';
 
 function TwentyIfft() {
     return (
@@ -98,47 +99,64 @@ function TwentyIfft() {
                                     🎬 Submit Your Film Entry
                                 </h3>
                                 <p className="text-gray-500">
-                                    Download the official entry form and submit to the appropriate category.
+                                    Submit your official entry through the online form for the relevant award category.                          
+
                                 </p>
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                                     {/* Asian Cinema */}
                                     <div className="relative flex flex-col bg-white border border-gray-300 text-black p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
                                         <span className="text-lg font-semibold text-indigo-800">Asian Cinema</span>
-                                        <p className="text-sm text-gray-600 mt-2">📄 Download Form</p>
+                                        {/* <p className="text-sm text-gray-600 mt-2">📄 Download Form</p>
                                         <a
                                             href="/20th IFFT - 2025 Competition Films  asian.pdf"
                                             download
                                             className="absolute bottom-4 right-4 inline-block bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-indigo-700 transition"
                                         >
-                                            Apply Now
-                                        </a>
+                                            
+                                        </a> */}
+                                        <Link to={'/form-asian'}
+                                        className="absolute bottom-4 right-4 inline-block bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-indigo-700 transition"
+                                        >
+                                        Apply Now
+                                        </Link>
                                     </div>
 
 
                                     {/* Indian Cinema */}
                                     <div className="relative flex flex-col bg-white border border-gray-300 text-black p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
                                         <span className="text-lg font-semibold text-red-800">Indian Cinema</span>
-                                        <p className="text-sm text-gray-600 mt-2">📄 Download Form</p>
+                                        {/* <p className="text-sm text-gray-600 mt-2">📄 Download Form</p>
                                         <a
                                             href="/20th IFFT - 2025 Competition Films Indian.pdf"
                                             download
                                             className="absolute bottom-4 right-4 inline-block bg-red-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-red-700 transition"
                                         >
                                             Apply Now
-                                        </a>
+                                        </a> */}
+                                        <Link to={'/form-indian'}
+                                        className="absolute bottom-4 right-4 inline-block bg-red-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-red-700 transition"
+                                        >
+                                        Apply Now
+                                        </Link>
                                     </div>
                                     {/* Malayalam Cinema */}
                                     <div className="relative flex flex-col bg-white border border-gray-300 text-black p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
                                         <span className="text-lg font-semibold text-yellow-800">Malayalam Cinema</span>
-                                        <p className="text-sm text-gray-600 mt-2">📄 Download Form</p>
+                                        {/* <p className="text-sm text-gray-600 mt-2">📄 Download Form</p>
                                         <a
                                             href="/20th IFFT - 2025 Competition Films malayalam.pdf"
                                             download
                                             className="absolute bottom-4 right-4 inline-block bg-yellow-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-yellow-700 transition"
                                         >
                                             Apply Now
-                                        </a>
+                                        </a> */}
+
+                                        <Link to={'/form-malayalam'}
+                                         className="absolute bottom-4 right-4 inline-block bg-yellow-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-yellow-700 transition"
+                                        >
+                                        Apply Now
+                                        </Link>
                                     </div>
 
                                 </div>

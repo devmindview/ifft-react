@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 // import hero from '../../assets/hero.jpg'
 import hero2 from '../../assets/hero.jpg'
-import vid from '../../assets/vid.mp4'
+import vid from '../../assets/intro2.mp4'
 import AboutCard from '../ui/AboutCard';
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
@@ -10,7 +10,12 @@ import { motion } from "framer-motion";
 import img1 from '../../assets/card.jpg';
 import img2 from '../../assets/card1.webp';
 import img3 from '../../assets/card2.webp';
-import partner from '../../assets/associate.webp';
+import partner1 from '../../assets/assosiatewith/associate.webp';
+import partner2 from '../../assets/assosiatewith/geothe.png';
+import partner3 from '../../assets/assosiatewith/ksfdc.png';
+import partner4 from '../../assets/assosiatewith/kca.png';
+
+
 import ifftposter from '../../assets/posterifft.jpeg'
 
 import dora from '../../assets/dora.webp';
@@ -21,7 +26,9 @@ import EventSection from '../components/EventSection';
 import { Helmet } from 'react-helmet';
 
 import up1 from '../../assets/upcoming/upcoming.jpeg'
+import { Link } from 'react-router-dom';
 
+import award from '../../assets/Award.png'
 
 const venues = [
     {
@@ -154,22 +161,31 @@ function Home() {
                     {/* Dark overlay (optional) */}
                     <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-black to-transparent z-10" />
                     <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent z-10" />
-                    <div className="absolute inset-0 bg-black/40 z-10" /> {/* Subtle center darkness */}
+                    <div className="absolute inset-0 bg-black/10 z-10" /> {/* Subtle center darkness */}
                 </div>
 
                 {/* Centered Content */}
                 <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-4">
                     <FadeInFromBottom>
-                        <h1 className="text-3xl md:text-7xl uppercase font-bold tracking-wide text-[#fccd67]">
+                        <h1 className="text-3xl md:text-7xl uppercase font-semibold tracking-wide text-white">
                             International Film <br /> Festival Thrissur
                         </h1>
                     </FadeInFromBottom>
 
                     <FadeInFromBottom>
-                        <p className="mt-1 text-xl md:text-3xl font-medium text-white tracking-wider">
-                            Celebrating 20th International Film Festival of Thrissur <br /> 2025 SEPTEMBER 26- OCTOBER 2 @Thrissur
+                        {/* Mobile only */}
+                        <p className="mt-1 text-base md:hidden text-center font-medium text-white/50 tracking-wider">
+
+                            Celebrating 20th International Film Festival of Thrissur 2025 SEPTEMBER 26 - OCTOBER 2 @Thrissur
+                        </p>
+
+                        {/* Desktop only */}
+                        <p className="mt-1 text-lg hidden md:block text-center font-medium text-white/50 tracking-wider">
+                            Celebrating 20th International Film Festival of Thrissur <br />
+                            2025 SEPTEMBER 26 - OCTOBER 2 @Thrissur
                         </p>
                     </FadeInFromBottom>
+
 
                     <FadeInFromBottom>
                         <a
@@ -185,14 +201,20 @@ function Home() {
                                     });
                                 }
                             }}
-                            className="inline-block my-6 px-6 py-2 border border-white text-white rounded-lg font-medium tracking-wide
-               hover:bg-white hover:text-black transition-all duration-300 ease-in-out"
+                            className="inline-block mt-4 px-6 py-2 border border-teal-600 text-white rounded-lg font-medium tracking-wide
+               hover:bg-transparent bg-teal-950 hover:text-white transition-all duration-300 ease-in-out"
                         >
-                            Entry Form
+                            Award Entry Forms
                         </a>
                     </FadeInFromBottom>
 
-
+                    <FadeInFromBottom>
+                        <Link to={'/form'} className="inline-block md:hidden">
+                            <button className="text-white border border-white px-10 py-2 mt-2 tracking-wide hover:bg-teal-950 transition rounded-lg">
+                                Delegate Form
+                            </button>
+                        </Link>
+                    </FadeInFromBottom>
                 </div>
 
                 {/* Scroll Indicator */}
@@ -248,8 +270,8 @@ function Home() {
                                     {
                                         id: 5,
                                         title: "ISFF 2025 INTERNATIONAL science Film Festival",
-                                        date:  "August 8,9,10",
-                                        image:  up1,
+                                        date: "August 8,9,10",
+                                        image: up1,
                                         location: "Kairali / Sree തിയേറ്റർ,Thrissur ",
                                     },
                                     {
@@ -323,47 +345,56 @@ function Home() {
                                     🎬 Submit Your Film Entry
                                 </h3>
                                 <p className="text-gray-600">
-                                    Download the official entry form and submit to the appropriate category.
-                                </p>
+                                    Submit your official entry through the online form for the relevant award category.                                </p>
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                                     {/* Asian Cinema */}
                                     <div className="relative flex flex-col bg-white border border-gray-300 text-black p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
                                         <span className="text-lg font-semibold text-indigo-800">Asian Cinema</span>
-                                        <p className="text-sm text-gray-600 mt-2">📄 Download Form</p>
-                                        <a
+                                        {/* <p className="text-sm text-gray-600 mt-2">📄 Download Form</p> */}
+                                        {/* <a
                                             href="/20th IFFT - 2025 Competition Films  asian.pdf"
                                             download
                                             className="absolute bottom-4 right-4 inline-block bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-indigo-700 transition"
                                         >
                                             Apply Now
-                                        </a>
+                                        </a> */}
+
+                                        <Link to={'form-asian'} className="absolute bottom-4 right-4 inline-block bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-indigo-700 transition">
+                                            Apply Now
+                                        </Link>
                                     </div>
 
 
                                     {/* Indian Cinema */}
                                     <div className="relative flex flex-col bg-white border border-gray-300 text-black p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
                                         <span className="text-lg font-semibold text-red-800">Indian Cinema</span>
-                                        <p className="text-sm text-gray-600 mt-2">📄 Download Form</p>
-                                        <a
+                                        {/* <p className="text-sm text-gray-600 mt-2">📄 Download Form</p> */}
+                                        {/* <a
                                             href="/20th IFFT - 2025 Competition Films Indian.pdf"
                                             download
                                             className="absolute bottom-4 right-4 inline-block bg-red-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-red-700 transition"
                                         >
                                             Apply Now
-                                        </a>
+                                        </a> */}
+                                        <Link to={'form-indian'} className="absolute bottom-4 right-4 inline-block bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-indigo-700 transition">
+                                            Apply Now
+                                        </Link>
                                     </div>
                                     {/* Malayalam Cinema */}
                                     <div className="relative flex flex-col bg-white border border-gray-300 text-black p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
                                         <span className="text-lg font-semibold text-yellow-800">Malayalam Cinema</span>
-                                        <p className="text-sm text-gray-600 mt-2">📄 Download Form</p>
-                                        <a
+                                        {/* <p className="text-sm text-gray-600 mt-2">📄 Download Form</p> */}
+                                        {/* <a
                                             href="/20th IFFT - 2025 Competition Films malayalam.pdf"
                                             download
                                             className="absolute bottom-4 right-4 inline-block bg-yellow-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-yellow-700 transition"
                                         >
                                             Apply Now
-                                        </a>
+                                        </a> */}
+                                        <Link to={'form-malayalam'} className="absolute bottom-4 right-4 inline-block bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-indigo-700 transition">
+                                            Apply Now
+                                        </Link>
                                     </div>
 
                                 </div>
@@ -403,6 +434,7 @@ function Home() {
                             20<sup>th</sup> International Film Festival of  Thrissur (IFFT 2025)
                         </p>
                     </FadeInFromBottom>
+
                     <FadeInFromBottom>
                         <p className="text-lg/6 md:text-2xl/7 text-gray-300 max-w-3xl mx-auto">
                             A celebration of cinema, creativity, and culture in the heart of Kerala - experience 6 unforgettable days of global film magic.
@@ -543,14 +575,14 @@ function Home() {
                         </p>
                     </FadeInFromBottom>
                     <FadeInFromBottom>
-                        <p className="mt-3 text-md md:text-lg text-gray-400 tracking-wide">
+                        {/* <p className="mt-3 text-md md:text-lg text-gray-400 tracking-wide">
 
                             Download the Delegate form and submit .
-                        </p>
+                        </p> */}
                     </FadeInFromBottom>
                     <div className='w-100 flex flex-col md:flex-row gap-4'>
                         <FadeInFromBottom>
-                            <a
+                            {/* <a
                                 href="/Membership Form Pdf.pdf"
                                 download
                                 className="inline-block"
@@ -558,7 +590,14 @@ function Home() {
                                 <button className="bg-yellow-500 text-xl md:text-2xl text-black px-7 py-2 mt-3 tracking-wide hover:bg-yellow-600 transition rounded">
                                     Delegate / Membership Form
                                 </button>
-                            </a>
+                            </a> */}
+                            <Link to={'/form'}
+
+                                className="inline-block">
+                                <button className="bg-yellow-500 text-xl md:text-2xl text-black px-7 py-2 mt-5 tracking-wide hover:bg-yellow-600 transition rounded">
+                                    Delegate / Membership Form
+                                </button>
+                            </Link>
                         </FadeInFromBottom>
                     </div>
 
@@ -607,20 +646,48 @@ function Home() {
                             We are proud to collaborate with institutions and organizations that support the creative arts and independent storytelling.
                         </p>
                     </FadeInFromBottom>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center justify-center">
-                        {[...Array(5)].map((_, idx) => (
-                            <div key={idx} className="group flex items-center justify-center p-4 border border-gray-200 rounded-lg  transition">
-                                <FadeInFromBottom>
-                                    <img
-                                        src={partner}
-                                        alt={`Brand ${idx + 1}`}
-                                        className="h-14 object-contain grayscale group-hover:grayscale-0 group-hover:scale-125 transition duration-300"
-                                    />
-                                </FadeInFromBottom>
-                            </div>
+                    <div className="grid grid-cols-2 gap-6 items-center justify-center md:flex md:flex-wrap">
+                        <div className="group flex items-center justify-center p-4 border border-gray-200 rounded-lg  transition">
+                            <FadeInFromBottom>
+                                <img
+                                    src={partner1}
+                                    alt=''
+                                    className="h-14 object-contain grayscale group-hover:grayscale-0 group-hover:scale-125 transition duration-300"
+                                />
 
+                            </FadeInFromBottom>
+                        </div>
 
-                        ))}
+                        <div className="group flex items-center justify-center p-4 border border-gray-200 rounded-lg  transition">
+                            <FadeInFromBottom>
+
+                                <img
+                                    src={partner2}
+                                    alt=''
+                                    className="h-14 object-contain grayscale group-hover:grayscale-0 group-hover:scale-125 transition duration-300"
+                                />
+                            </FadeInFromBottom>
+                        </div>
+                        <div className="group flex items-center justify-center p-4 border border-gray-200 rounded-lg  transition">
+                            <FadeInFromBottom>
+
+                                <img
+                                    src={partner3}
+                                    alt=''
+                                    className="h-14 object-contain grayscale group-hover:grayscale-0 group-hover:scale-125 transition duration-300"
+                                />
+                            </FadeInFromBottom>
+                        </div>
+                                                <div className="group flex items-center justify-center p-4 border border-gray-200 rounded-lg  transition">
+                            <FadeInFromBottom>
+
+                                <img
+                                    src={partner4}
+                                    alt=''
+                                    className="h-14 object-contain grayscale group-hover:grayscale-0 group-hover:scale-125 transition duration-300"
+                                />
+                            </FadeInFromBottom>
+                        </div>
                     </div>
                 </div>
             </section>

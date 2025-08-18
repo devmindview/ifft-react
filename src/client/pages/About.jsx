@@ -2,6 +2,7 @@ import React from 'react'
 import hero from '../../assets/hero-2.jpg'
 import FadeInFromBottom from '../ui/FadeInFromBottom'
 import { Helmet } from 'react-helmet';
+import vid from '../../assets/vid.mp4'
 
 function About() {
     return (
@@ -34,20 +35,29 @@ function About() {
             </Helmet>
             <section className="relative min-h-screen md:h-screen pb-5 w-full text-white overflow-hidden">
                 {/* Background image */}
-                <div className="absolute inset-0">
-                    <img
-                        src={hero}
-                        alt="Film Background"
-                        className="w-full h-full object-cover"
-                    />
-                    {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-black/80"></div>
+                {/* Background Video */}
+                <div className="absolute inset-0 z-0">
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover grayscale"
+                    >
+                        <source src={vid} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+
+                    {/* Dark overlay (optional) */}
+                    <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-black to-transparent z-10" />
+                    <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent z-10" />
+                    <div className="absolute inset-0 bg-black/60 z-10" /> {/* Subtle center darkness */}
                 </div>
 
                 {/* Centered Content */}
                 <div className="relative max-w-7xl mx-auto z-10 flex flex-col justify-center items-center text-center h-full px-4 pt-28 md:pt-0">
                     <FadeInFromBottom>
-                        <h1 className="text-3xl md:text-4xl font-semibold tracking-wider text-[#e2c380]">
+                        <h1 className="text-3xl md:text-4xl font-semibold tracking-wider text-blue-500">
                             About Us
                         </h1>
                     </FadeInFromBottom>

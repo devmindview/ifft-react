@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
+import qr from '../../../assets/Qr/qrcode.jpeg'
+import qricon from '../../../assets/Qr/qr-icon.png'
 
 function Form() {
   const [formData, setFormData] = useState({
@@ -17,9 +19,11 @@ function Form() {
   });
 
   const categories = [
-    { label: "documentary", value: 500 },
-    { label: "short film", value: 300 },
-    { label: "feature film", value: 800 },
+    { label: "Membership", value: 2000 },
+    { label: "20th IFFT Delegate", value: 1300 },
+    { label: "Student Delegate", value: 500 },
+    { label: "Institutional Member", value: 25000 },
+    { label: "Life Membership", value: 1000 },
   ];
 
   const handleChange = (e) => {
@@ -76,7 +80,7 @@ function Form() {
       <div className="max-w-6xl mx-auto bg-white p-8 rounded-lg shadow">
         <h2 className="text-xl font-semibold text-blue-500 text-center mb-6">
           DELEGATE / MEMBER
-          FORM - 2025
+          FORM - IFFT 2025
         </h2>
 
         <form className="space-y-5" onSubmit={handleSubmit}>
@@ -183,15 +187,15 @@ function Form() {
           {/* Signature, Date & Place */}
           <div>
             <label className="block text-sm font-medium mb-1">Signature</label>
-          
-             <input
-                type="file"
-                name="signature"
-                accept="image/*"
-                onChange={handleChange}
-                className="w-full border rounded px-3 py-2"
-                required
-              />
+
+            <input
+              type="file"
+              name="signature"
+              accept="image/*"
+              onChange={handleChange}
+              className="w-full border rounded px-3 py-2"
+              required
+            />
           </div>
 
 
@@ -221,12 +225,17 @@ function Form() {
                 />
               </div>
               <div>
-                <img
-                  src="/payment-qr.png"
-                  alt="QR Code"
-                  className="w-32 h-32 object-cover rounded-md border"
-                  
-                />
+                <p className="font-medium text-gray-500 mb-2 text-center">Click to download</p>
+
+                <a href={qr} download="upi-qr.png">
+                  <img
+                    src={qricon}
+                    alt="Indian Payment QR Code"
+                    className="mx-auto w-48 h-48 border p-2 bg-white cursor-pointer"
+                  />
+                </a>
+
+                <p className="text-sm mt-2">UPI ID: 9496168654@cnrb</p>
               </div>
             </div>
 
@@ -250,7 +259,7 @@ function Form() {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-pink-600 text-white px-6 py-2 rounded hover:bg-pink-700 transition"
+              className="bg-teal-600 text-white px-6 py-2 rounded hover:bg-teal-700 transition"
             >
               Submit for Verification
             </button>

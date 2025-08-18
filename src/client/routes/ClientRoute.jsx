@@ -29,14 +29,15 @@ function ClientRoute() {
                     {/* Form */}
                     <Route path='/form' element={<Form />} />
                     <Route path='/form-asian' element={<AsianForm />} />
-                    <Route path='/form-indian' element={<IndianForm/>} />
-                    <Route path='/form-malayalam' element={<MalayalamForm/>} />
+                    <Route path='/form-indian' element={<IndianForm />} />
+                    <Route path='/form-malayalam' element={<MalayalamForm />} />
                     <Route path='/twenty-ifft' element={<TwentyIfft />} />
                     <Route path='/isff-2025' element={<Isff2025 />} />
                     <Route path='/ifff-9th' element={<Ifff9 />} />
                     <Route path='/kottaka' element={<Kottaka />} />
                     <Route path='/privacy-and-terms' element={<PolicyAndTerms />} />
                     <Route path='/contact-us' element={<Contact />} />
+
                 </Route>
             </Routes>
         </>
